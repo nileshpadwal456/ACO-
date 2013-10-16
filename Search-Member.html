@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Synergy ACO Platform</title>
+
+		<meta name="description" content="Common UI Features &amp; Elements" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!--basic styles-->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<!-- Include one of jTable styles. -->
+       
+ 
+<!-- Include jTable script file. -->
+    
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!--page specific plugin styles-->
+
+		<link rel="stylesheet" href="assets/css/jquery-ui-1.10.3.custom.min.css" />
+		<link rel="stylesheet" href="assets/css/jquery.gritter.css" />
+		<link rel="stylesheet" href="assets/css/datepicker.css" />
+		<link rel="stylesheet" href="assets/css/ui.jqgrid.css" />
+
+		<!--fonts-->
+
+		<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+
+		<!--ace styles-->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-responsive.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!--inline styles related to this page-->
+   <style type="text/css">
+        
+        .ui-jqgrid tr.ui-row-ltr td { border-right-color: transparent; }
+        .ui-jqgrid tr.ui-row-ltr td { border-bottom-color: transparent; }
+        /*.ui-jqgrid { border-width: 0px; }*/
+        .ui-jqgrid { border-right-width: 0px; border-left-width: 0px; }
+        th.ui-th-column { border-right-color: transparent !important }
+               th.ui-th-column { border-right-color: transparent}
+    </style>
+
+		<style>
+			.spinner-preview {
+				width:100px;
+				height:100px;
+				text-align:center;
+				margin-top:60px;
+			}
+			.widget-box1 {
+				width:330px;
+				height:300px;
+				text-align:center;
+				margin-top: 5px;
+				margin-left: -30px;
+			}
+			.widget-box2 {
+				width:330px;
+				height:300px;
+				text-align:center;
+				margin-top: 5px;
+				margin-left: 0 px;
+			}
+			
+			
+			.widget-box3 {
+				width:340px;
+				width:340px;
+				height:300px;
+				text-align:center;
+				margin-top: 5px;
+				margin-left: 0 px;
+			}
+			.main-content1 {
+				margin-left:0px;
+				margin-top: 0 px;
+				text-align: left;
+				}
+							
+			.dropdown-preview {
+				margin:0 5px;
+				display:inline-block;
+			}
+			.dropdown-preview  > .dropdown-menu {
+				display: block;
+				position: static;
+				margin-bottom: 5px;
+			}
+			
+		</style>
+
+	<!--ace settings handler-->
+
+	    <script>
+           function myFunction()
+             {
+               Notification("Created Successfully!");
+             }
+        </script>
+	
+		<script src="assets/js/ace-extra.min.js"></script>
+		
+	</head>
+
+	<body>
+		<div class="navbar" id="navbar">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-inner">
+				<div class="container-fluid">
+					<a href="#" class="brand">
+						<small>
+							<i class="icon-leaf"></i>
+							Synergy Accountable Care Coalition
+						</small>
+					</a><!--/.brand-->
+					<ul class="nav ace-nav pull-right">
+					
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+							
+								<span class="user-info">
+									<small>Welcome,</small>
+									Nutan345
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer">
+								<li>
+									<a href="#">
+										<i class="icon-cog"></i>
+										Settings
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="icon-user"></i>
+										Profile
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+								
+								
+									<a href="Index.html">
+										<i class="icon-off"></i>
+										Logout
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!--/.ace-nav-->
+				</div><!--/.container-fluid-->
+			</div><!--/.navbar-inner-->
+		</div>
+
+		<div class="main-container container-fluid">
+			<a class="menu-toggler" id="menu-toggler" href="#">
+				<span class="menu-text"></span>
+			</a>
+
+			<div class="sidebar" id="sidebar">
+				<script type="text/javascript">
+					try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+				</script>
+
+				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+						
+
+					<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+						<span class="btn btn-success"></span>
+
+						<span class="btn btn-info"></span>
+
+						<span class="btn btn-warning"></span>
+
+						<span class="btn btn-danger"></span>
+					</div>
+				</div><!--#sidebar-shortcuts-->
+
+		<ul class="nav nav-list">
+					
+				<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-h-sign"></i>
+							<span class="menu-text"> ACO Management </span>
+							<b class="arrow icon-angle-down"></b>
+						</a>
+						<ul class="submenu">
+						
+						
+						    <li>
+								<a href="ACO-Information.html">
+									<i class="icon-double-angle-right"></i>
+									ACO Information
+								</a>
+							</li>
+							<li>
+								<a href="ACO-Governance.html">
+									<i class="icon-double-angle-right"></i>
+									AGO Governing Body
+								</a>
+							</li>
+							<li>
+								<a href="Financial.html">
+									<i class="icon-double-angle-right"></i>
+									ACO Financials
+								</a>
+							</li>
+								
+							<li>
+								<a href="ACO-List.html">
+									<i class="icon-double-angle-right"></i>
+								Other ACO's
+								</a>
+							</li>
+						    <li>
+								<a href="Role-Management.html">
+									<i class="icon-double-angle-right"></i>
+									Role Management
+								</a>
+							</li>
+							
+							 <li>
+								<a href="User-Management.html">
+									<i class="icon-double-angle-right"></i>
+									User Management
+								</a>
+							</li>
+							
+							
+						
+						</ul>
+					</li>
+   				<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-hospital"></i>
+							<span class="menu-text"> Facilities </span>
+
+							<b class="arrow icon-angle-down"></b>
+						</a>
+
+						<ul class="submenu">
+							<li>
+								<a href="Search-Facility.html">
+									<i class="icon-double-angle-right"></i>
+									Search Facilities
+								</a>
+							</li>
+
+							<li>
+								<a href="Create-Facility.html">
+									<i class="icon-double-angle-right"></i>
+									Create Facilities
+								</a>
+							</li>
+					</ul>
+				</li>
+			<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-stethoscope"></i>
+							<span class="menu-text"> Providers </span>
+
+							<b class="arrow icon-angle-down"></b>
+						</a>
+
+						<ul class="submenu">
+							<li>
+								<a href="Search-Providers.html">
+									<i class="icon-double-angle-right"></i>
+									Search Providers 
+								</a>
+							</li>
+							<li>
+								<a href="Create-Providers.html">
+									<i class="icon-double-angle-right"></i>
+									Create Providers 
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-list"></i>
+							<span class="menu-text"> Contracts </span>
+
+							<b class="arrow icon-angle-down"></b>
+						</a>
+							<ul class="submenu">
+							<li>
+								<a href="ACO-Contracts.html">
+									<i class="icon-double-angle-right"></i>
+									ACO Contracts
+								</a>
+							</li>
+
+							<li>
+								<a href="Facility-Contracts.html">
+									<i class="icon-double-angle-right"></i>
+									Facility Contracts
+								</a>
+							</li>
+						</ul>
+					</li>										
+					<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-female"></i>
+							<span class="menu-text"> Members </span>
+
+							<b class="arrow icon-angle-down"></b>
+						</a>
+                               <ul class="submenu">
+							<li>
+								<a href="Search-Member.html">
+									<i class="icon-double-angle-right"></i>
+									Search Members
+								</a>
+							</li>
+
+							<li>
+								<a href="Create-Member.html">
+									<i class="icon-double-angle-right"></i>
+									Create Members
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-user-md"></i>
+							<span class="menu-text"> Care Coordination </span>
+
+							<b class="arrow icon-angle-down"></b>
+						</a>
+
+						<ul class="submenu">
+							<li>
+								<a href="Care-Gap.html">
+									<i class="icon-double-angle-right"></i>
+									Care Gaps
+								</a>
+							</li>
+
+							<li>
+								<a href="Care-Notification.html">
+									<i class="icon-double-angle-right"></i>
+									Care Notifications
+								</a>
+							</li>
+							
+							<li>
+								<a href="Admission.html">
+									<i class="icon-double-angle-right"></i>
+									Admissions
+								</a>
+							</li>
+							
+							<li>
+								<a href="Discharge.html">
+									<i class="icon-double-angle-right"></i>
+									Discharges
+								</a>
+							</li>
+							<li>
+								<a href="Medication.html">
+									<i class="icon-double-angle-right"></i>
+									Medication
+								</a>
+							</li>
+							<li>
+								<a href="Disease.html">
+									<i class="icon-double-angle-right"></i>
+									Diseases
+								</a>
+							</li>
+							<li>
+								<a href="Lab-Work.html">
+									<i class="icon-double-angle-right"></i>
+									Lab Work
+								</a>
+							</li>
+							<li>
+								<a href="Appointment.html">
+									<i class="icon-double-angle-right"></i>
+								Appointment
+								</a>
+							</li>
+							<li>
+								<a href="Care-Plan.html">
+									<i class="icon-double-angle-right"></i>
+									Care Plan
+								</a>
+							</li>
+                            <li>
+								<a href="Discharge-Plan.html">
+									<i class="icon-double-angle-right"></i>
+									Discharge Plan
+								</a>
+							</li>
+							
+							
+							
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-edit"></i>
+							<span class="menu-text"> Care Configuration  </span>
+
+							<b class="arrow icon-angle-down"></b>
+						</a>
+                               <ul class="submenu">
+							<li>
+								<a href="Gap-Rule.html">
+									<i class="icon-double-angle-right"></i>
+									Gap Rules
+								</a>
+							</li>
+							
+							<li>
+								<a href="Notification-Rule.html">
+									<i class="icon-double-angle-right"></i>
+									Notification Rules
+								</a>
+							</li>
+							<li>
+								<a href="Rules-Management.html">
+									<i class="icon-double-angle-right"></i>
+									Rules Management
+								</a>
+							</li>
+						
+						</ul>
+					</li>
+																		           
+				    <li>
+						<a href="Reports.html">
+							<i class="icon-list-alt"></i>
+							<span class="menu-text"> Reports </span>
+						</a>
+					</li>
+					
+					<li>
+						<a href="Correspondence.html">
+							<i class="icon-envelope"></i>
+							<span class="menu-text"> Correspondence  </span>
+						</a>
+					</li>
+					
+					<li>
+						<a href="Payment.html">
+							<i class="icon-credit-card"></i>
+							<span class="menu-text"> Payments </span>
+						</a>
+					</li>
+					
+					<li>
+						<a href="HIE.html">
+							<i class="icon-list-alt"></i>
+							<span class="menu-text"> HIE </span>
+						</a>
+					</li>
+					</li>
+					<li>
+												
+					</li>
+				</ul><!--/.nav-list-->
+
+				<div class="sidebar-collapse" id="sidebar-collapse">
+					<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+				</div>
+
+				<script type="text/javascript">
+					try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+				</script>
+			</div>
+
+			<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+					<script type="text/javascript">
+						try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+					</script>
+
+					<ul class="breadcrumb">
+				<li>
+						
+							<a href="Dashboard.html"><i class="orange icon-home bigger-200" ></i></a>
+				
+							<span class="divider">
+								<i class="icon-angle-right arrow-icon"></i>
+							</span>
+						</li>
+
+							<li>
+							<a href="#">Members</a>
+
+							<span class="divider">
+								<i class="icon-angle-right arrow-icon"></i>
+							</span>
+						</li>
+						<li class="active">Search Members</li>
+					</ul><!--.breadcrumb-->
+
+					<div class="nav-search" id="nav-search">
+						<form class="form-search">
+							<span class="input-icon">
+								<input type="text" placeholder="Search ..." class="input-small nav-search-input" id="nav-search-input" autocomplete="off" />
+								<i class="icon-search nav-search-icon"></i>
+							</span>
+						</form>
+					</div><!--#nav-search-->
+				</div>
+				<div class="page-content">
+					<div class="page-header position-relative">
+						<h1>
+							Search Members <h1>
+							
+							
+						</h1>
+							
+						</h1>
+					</div><!--/.page-header-->
+
+					<div class="row-fluid">
+						<div class="span12">
+							<!--PAGE CONTENT BEGINS-->
+
+							<div class="row-fluid">
+								<div class="span6">
+									<div class="tabbable">
+										<ul class="nav nav-tabs" id="myTab">
+											<li class="active">
+												<a data-toggle="tab" href="#home">
+													<i class="green icon-search bigger-110"></i>
+													Filter By
+												</a>
+											</li>
+
+											
+
+												</ul>
+											</li>
+										</ul>
+
+										<div class="tab-content">
+											<div id="home" class="tab-pane in active">
+												
+							<form class="form-horizontal">
+							
+							    <div class="control-group">
+									
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="form-field-1">Name</label>																											
+									<div class="controls">
+										<input type="text" id="form-field-1" placeholder="Name" />
+									</div>
+								</div>
+								
+								<div class="control-group">
+									<label class="control-label" for="form-field-1">Member No</label>																											
+									<div class="controls">
+										<input type="text" id="form-field-1" placeholder="Member No" />
+									</div>
+								</div>
+								
+								
+								<div class="control-group">
+									<label class="control-label" for="form-field-1">Tax Id</label>																											
+									<div class="controls">
+										<input type="text" id="form-field-1" placeholder="Tax Id" />
+									</div>
+								</div>
+								
+								
+								<div class="control-group">
+									<label class="control-label" for="form-field-1">NPI</label>																											
+									<div class="controls">
+										<input type="text" id="form-field-1" placeholder="NPI" />
+									</div>
+								</div>
+								
+								
+								<div class="control-group">
+									<label class="control-label" for="form-field-1">Alias Name</label>																											
+									<div class="controls">
+										<input type="text" id="form-field-1" placeholder="Alias Name" />
+									</div>
+								</div>
+								
+								
+								<div class="control-group">
+									<label class="control-label" for="form-field-1">Member Type</label>																											
+									<div class="controls">
+										<input type="text" id="form-field-1" placeholder="Member Type" />
+									</div>
+								</div>
+								
+								
+								
+								<a href="View-Member.html" class="btn btn-primary" style="float:right;margin-right:300px;margin-top:50px;" >Search </a>
+								<a href="View-Member.html" " style="float: right;" > </a>
+                              <a></a>							  
+									<div class="control-group">
+									
+									</div>
+								</div>
+								       
+								</div>
+								
+								
+								
+								</form>
+											</div>
+
+											
+										</div>
+									</div>
+								</div><!--/span-->
+
+								
+							</div>
+
+							<script type="text/javascript">
+								var $path_assets = "assets";//this will be used in gritter Notifications containing images
+							</script>
+
+							<!--PAGE CONTENT ENDS-->
+						</div><!--/.span-->
+					</div><!--/.row-fluid-->
+				</div><!--/.page-content-->
+
+				<div class="ace-settings-container" id="ace-settings-container">
+					
+
+					<div class="ace-settings-box" id="ace-settings-box">
+						<div>
+							<div class="pull-left">
+								<select id="skin-colorpicker" class="hide">
+									<option data-skin="default" value="#438EB9">#438EB9</option>
+									<option data-skin="skin-1" value="#222A2D">#222A2D</option>
+									<option data-skin="skin-2" value="#C6487E">#C6487E</option>
+									<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+								</select>
+							</div>
+							<span>&nbsp; Choose Skin</span>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-navbar" />
+							<label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar" />
+							<label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-breadcrumbs" />
+							<label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" />
+							<label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
+						</div>
+					</div>
+				</div><!--/#ace-settings-container-->
+			</div><!--/.main-content-->
+		</div><!--/.main-container-->
+
+		<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-small btn-inverse">
+			<i class="icon-double-angle-up icon-only bigger-110"></i>
+		</a>
+
+		<!--basic scripts-->
+
+		<!--[if !IE]>-->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!--<![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!--page specific plugin scripts-->
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/bootbox.min.js"></script>
+		<script src="assets/js/jquery.easy-pie-chart.min.js"></script>
+		<script src="assets/js/jquery.gritter.min.js"></script>
+		<script src="assets/js/spin.min.js"></script>
+
+		<!--ace scripts-->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!--inline scripts related to this page-->
+
+		<script type="text/javascript">
+			jQuery(function($) {
+				/**
+				$('#myTab a[data-toggle="tab"]').on('shown', function (e) {
+				  console.log(e.target.getAttribute("href"));
+				})
+				*/
+			
+			
+				$('#accordion2').on('hide', function (e) {
+					$(e.target).prev().children(0).addClass('collapsed');
+				})
+				$('#accordion2').on('hidden', function (e) {
+					$(e.target).prev().children(0).addClass('collapsed');
+				})
+				$('#accordion2').on('show', function (e) {
+					$(e.target).prev().children(0).removeClass('collapsed');
+				})
+				$('#accordion2').on('shown', function (e) {
+					$(e.target).prev().children(0).removeClass('collapsed');
+				})
+				
+				$('#accordion-style').on('click', function(e){
+					var target = $(e.target);
+					var which = parseInt($.trim(target.text()));
+					if(which == 2) $('#accordion2').addClass('accordion-style2');
+					 else $('#accordion2').removeClass('accordion-style2');
+				});
+			
+			
+				var oldie = /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase());
+				$('.easy-pie-chart.percentage').each(function(){
+					$(this).easyPieChart({
+						barColor: $(this).data('color'),
+						trackColor: '#EEEEEE',
+						scaleColor: false,
+						lineCap: 'butt',
+						lineWidth: 8,
+						animate: oldie ? false : 1000,
+						size:75
+					}).css('color', $(this).data('color'));
+				});
+			
+				$('[data-rel=tooltip]').tooltip();
+				$('[data-rel=popover]').popover({html:true});
+			
+			
+				$('#gritter-regular').on(ace.click_event, function(){
+					$.gritter.add({
+						title: 'This is a regular notice!',
+						text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="blue">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+						image: $path_assets+'/avatars/avatar1.png',
+						sticky: false,
+						time: '',
+						class_name: (!$('#gritter-light').get(0).checked ? 'gritter-light' : '')
+					});
+			
+					return false;
+				});
+			
+				$('#gritter-sticky').on(ace.click_event, function(){
+					var unique_id = $.gritter.add({
+						title: 'This is a sticky notice!',
+						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="red">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+						image: $path_assets+'/avatars/avatar.png',
+						sticky: true,
+						time: '',
+						class_name: 'gritter-info' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+					});
+			
+					return false;
+				});
+			
+			
+				$('#gritter-without-image').on(ace.click_event, function(){
+					$.gritter.add({
+						// (string | mandatory) the heading of the notification
+						title: 'This is a notice without an image!',
+						// (string | mandatory) the text inside the notification
+						text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="orange">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+						class_name: 'gritter-success' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+					});
+			
+					return false;
+				});
+			
+			
+				$('#gritter-max3').on(ace.click_event, function(){
+					$.gritter.add({
+						title: 'This is a notice with a max of 3 on screen at one time!',
+						text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="green">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+						image: $path_assets+'/avatars/avatar3.png',
+						sticky: false,
+						before_open: function(){
+							if($('.gritter-item-wrapper').length >= 3)
+							{
+								return false;
+							}
+						},
+						class_name: 'gritter-warning' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+					});
+			
+					return false;
+				});
+			
+			
+				$('#gritter-center').on(ace.click_event, function(){
+					$.gritter.add({
+						title: 'This is a centered notification',
+						text: 'Just add a "gritter-center" class_name to your $.gritter.add or globally to $.gritter.options.class_name',
+						class_name: 'gritter-info gritter-center' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+					});
+			
+					return false;
+				});
+				
+				$('#gritter-error').on(ace.click_event, function(){
+					$.gritter.add({
+						title: 'This is a warning notification',
+						text: 'Just add a "gritter-light" class_name to your $.gritter.add or globally to $.gritter.options.class_name',
+						class_name: 'gritter-error' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+					});
+			
+					return false;
+				});
+					
+			
+				$("#gritter-remove").on(ace.click_event, function(){
+					$.gritter.removeAll();
+					return false;
+				});
+					
+			
+				///////
+			
+			
+				$("#bootbox-regular").on(ace.click_event, function() {
+					bootbox.prompt("What is your name?", function(result) {
+						if (result === null) {
+							//Example.show("Prompt dismissed");
+						} else {
+							//Example.show("Hi <b>"+result+"</b>");
+						}
+					});
+				});
+					
+				$("#bootbox-confirm").on(ace.click_event, function() {
+					bootbox.confirm("Are you sure?", function(result) {
+						if(result) {
+							bootbox.Notification("You are sure!");
+						}
+					});
+				});
+					
+				$("#bootbox-options").on(ace.click_event, function() {
+					bootbox.dialog("I am a custom dialog with smaller buttons", [{
+						"label" : "Success!",
+						"class" : "btn-small btn-success",
+						"callback": function() {
+							//Example.show("great success");
+						}
+						}, {
+						"label" : "Danger!",
+						"class" : "btn-small btn-danger",
+						"callback": function() {
+							//Example.show("uh oh, look out!");
+						}
+						}, {
+						"label" : "Click ME!",
+						"class" : "btn-small btn-primary",
+						"callback": function() {
+							//Example.show("Primary button");
+						}
+						}, {
+						"label" : "Just a button...",
+						"class" : "btn-small"
+						}]
+					);
+				});
+			
+			
+			
+				$('#spinner-opts small').css({display:'inline-block', width:'60px'})
+			
+				var slide_styles = ['', 'green','red','purple','orange', 'dark'];
+				var ii = 0;
+				$("#spinner-opts input[type=text]").each(function() {
+					var $this = $(this);
+					$this.hide().after('<span />');
+					$this.next().addClass('ui-slider-small').
+					addClass("inline ui-slider-"+slide_styles[ii++ % slide_styles.length]).
+					css({'width':'125px'}).slider({
+						value:parseInt($this.val()),
+						range: "min",
+						animate:true,
+						min: parseInt($this.data('min')),
+						max: parseInt($this.data('max')),
+						step: parseFloat($this.data('step')),
+						slide: function( event, ui ) {
+							$this.attr('value', ui.value);
+							spinner_update();
+						}
+					});
+				});
+			
+			
+			
+			
+			
+				$.fn.spin = function(opts) {
+					this.each(function() {
+					  var $this = $(this),
+						  data = $this.data();
+			
+					  if (data.spinner) {
+						data.spinner.stop();
+						delete data.spinner;
+					  }
+					  if (opts !== false) {
+						data.spinner = new Spinner($.extend({color: $this.css('color')}, opts)).spin(this);
+					  }
+					});
+					return this;
+				};
+			
+				function spinner_update() {
+					var opts = {};
+					$('#spinner-opts input[type=text]').each(function() {
+						opts[this.name] = parseFloat(this.value);
+					});
+					$('#spinner-preview').spin(opts);
+				}
+			
+			
+			
+				$('#id-pills-stacked').removeAttr('checked').on('click', function(){
+					$('.nav-pills').toggleClass('nav-stacked');
+				});
+			
+			
+			});
+		</script>
+		
+				
+	<footer id="footer" class="grid-block center">
+	                
+							<a id="totop-scroller" href="#page"></a>
+							<div class="muted">
+							
+			                 <small>@2013 Copyright Synergy Payer Solutions. All rights reserved.</small>		
+                            </div>	
+
+	</body>
+</html>

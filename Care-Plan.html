@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Synergy ACO Platform</title>
+
+		<meta name="description" content="Common UI Features &amp; Elements" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!--basic styles-->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<!-- Include one of jTable styles. -->
+       
+ 
+<!-- Include jTable script file. -->
+    
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!--page specific plugin styles-->
+
+		<link rel="stylesheet" href="assets/css/jquery-ui-1.10.3.custom.min.css" />
+		<link rel="stylesheet" href="assets/css/jquery.gritter.css" />
+		<link rel="stylesheet" href="assets/css/datepicker.css" />
+		<link rel="stylesheet" href="assets/css/ui.jqgrid.css" />
+
+		<!--fonts-->
+
+		<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+
+		<!--ace styles-->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-responsive.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!--inline styles related to this page-->
+   <style type="text/css">
+        
+        .ui-jqgrid tr.ui-row-ltr td { border-right-color: transparent; }
+        .ui-jqgrid tr.ui-row-ltr td { border-bottom-color: transparent; }
+        /*.ui-jqgrid { border-width: 0px; }*/
+        .ui-jqgrid { border-right-width: 0px; border-left-width: 0px; }
+        th.ui-th-column { border-right-color: transparent !important }
+               th.ui-th-column { border-right-color: transparent}
+    </style>
+
+		<style>
+			.spinner-preview {
+				width:100px;
+				height:100px;
+				text-align:center;
+				margin-top:60px;
+			}
+			.widget-box1 {
+				width:330px;
+				height:300px;
+				text-align:center;
+				margin-top: 5px;
+				margin-left: -30px;
+			}
+			.widget-box2 {
+				width:330px;
+				height:300px;
+				text-align:center;
+				margin-top: 5px;
+				margin-left: 0 px;
+			}
+			
+			
+			.widget-box3 {
+				width:340px;
+				width:340px;
+				height:300px;
+				text-align:center;
+				margin-top: 5px;
+				margin-left: 0 px;
+			}
+			.main-content1 {
+				margin-left:0px;
+				margin-top: 0 px;
+				text-align: left;
+				}
+							
+			.dropdown-preview {
+				margin:0 5px;
+				display:inline-block;
+			}
+			.dropdown-preview  > .dropdown-menu {
+				display: block;
+				position: static;
+				margin-bottom: 5px;
+			}
+			
+		</style>
+
+	<!--ace settings handler-->
+
+	    <script>
+           function myFunction()
+             {
+               Notification("Created Successfully!");
+             }
+        </script>
+	
+		<script src="assets/js/ace-extra.min.js"></script>
+		
+	</head>
+
+	<body>
+		<div class="navbar" id="navbar">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-inner">
+				<div class="container-fluid">
+					<a href="#" class="brand">
+						<small>
+							<i class="icon-leaf"></i>
+							Synergy Accountable Care Coalition
+						</small>
+					</a><!--/.brand-->
+					
+					<ul class="nav ace-nav pull-right">
+					
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+							
+								<span class="user-info">
+									<small>Welcome,</small>
+									Nutan345
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer">
+								<li>
+									<a href="#">
+										<i class="icon-cog"></i>
+										Settings
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="icon-user"></i>
+										Profile
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+								
+								
+									<a href="Index.html">
+										<i class="icon-off"></i>
+										Logout
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!--/.ace-nav-->
+				</div><!--/.container-fluid-->
+			</div><!--/.navbar-inner-->
+		</div>
+
+		<div class="main-container container-fluid">
+			<a class="menu-toggler" id="menu-toggler" href="#">
+				<span class="menu-text"></span>
+			</a>
+
+			<div class="sidebar" id="sidebar">
+				<script type="text/javascript">
+					try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+				</script>
+
+				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+						
+
+					<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+						<span class="btn btn-success"></span>
+
+						<span class="btn btn-info"></span>
+
+						<span class="btn btn-warning"></span>
+
+						<span class="btn btn-danger"></span>
+					</div>
+				</div><!--#sidebar-shortcuts-->
+
+		<ul class="nav nav-list">
+					
+				<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-h-sign"></i>
+							<span class="menu-text"> ACO Management </span>
+							<b class="arrow icon-angle-down"></b>
+						</a>
+						<ul class="submenu">
+						
+						
+						    <li>
+								<a href="ACO-Information.html">
+									<i class="icon-double-angle-right"></i>
+									ACO Information
+								</a>
+							</li>
+							<li>
+								<a href="ACO-Governance.html">
+									<i class="icon-double-angle-right"></i>
+									AGO Governing Body
+								</a>
+							</li>
+							<li>
+								<a href="Financial.html">
+									<i class="icon-double-angle-right"></i>
+									ACO Financials
+								</a>
+							</li>
+								
+							<li>
+								<a href="ACO-List.html">
+									<i class="icon-double-angle-right"></i>
+								Other ACO's
+								</a>
+							</li>
+						    <li>
+								<a href="Role-Management.html">
+									<i class="icon-double-angle-right"></i>
+									Role Management
+								</a>
+							</li>
+							
+							 <li>
+								<a href="User-Management.html">
+									<i class="icon-double-angle-right"></i>
+									User Management
+								</a>
+							</li>
+							
+							
+						
+						</ul>
+					</li>
+   				<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-hospital"></i>
+							<span class="menu-text"> Facilities </span>
+
+							<b class="arrow icon-angle-down"></b>
+						</a>
+
+						<ul class="submenu">
+							<li>
+								<a href="Search-Facility.html">
+									<i class="icon-double-angle-right"></i>
+									Search Facilities
+								</a>
+							</li>
+
+							<li>
+								<a href="Create-Facility.html">
+									<i class="icon-double-angle-right"></i>
+									Create Facilities
+								</a>
+							</li>
+					</ul>
+				</li>
+			<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-stethoscope"></i>
+							<span class="menu-text"> Providers </span>
+
+							<b class="arrow icon-angle-down"></b>
+						</a>
+
+						<ul class="submenu">
+							<li>
+								<a href="Search-Providers.html">
+									<i class="icon-double-angle-right"></i>
+									Search Providers 
+								</a>
+							</li>
+							<li>
+								<a href="Create-Providers.html">
+									<i class="icon-double-angle-right"></i>
+									Create Providers 
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-list"></i>
+							<span class="menu-text"> Contracts </span>
+
+							<b class="arrow icon-angle-down"></b>
+						</a>
+							<ul class="submenu">
+							<li>
+								<a href="ACO-Contracts.html">
+									<i class="icon-double-angle-right"></i>
+									ACO Contracts
+								</a>
+							</li>
+
+							<li>
+								<a href="Facility-Contracts.html">
+									<i class="icon-double-angle-right"></i>
+									Facility Contracts
+								</a>
+							</li>
+						</ul>
+					</li>										
+					<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-female"></i>
+							<span class="menu-text"> Members </span>
+
+							<b class="arrow icon-angle-down"></b>
+						</a>
+                               <ul class="submenu">
+							<li>
+								<a href="Search-Member.html">
+									<i class="icon-double-angle-right"></i>
+									Search Members
+								</a>
+							</li>
+
+							<li>
+								<a href="Create-Member.html">
+									<i class="icon-double-angle-right"></i>
+									Create Members
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-user-md"></i>
+							<span class="menu-text"> Care Coordination </span>
+
+							<b class="arrow icon-angle-down"></b>
+						</a>
+
+						<ul class="submenu">
+							<li>
+								<a href="Care-Gap.html">
+									<i class="icon-double-angle-right"></i>
+									Care Gaps
+								</a>
+							</li>
+
+							<li>
+								<a href="Care-Notification.html">
+									<i class="icon-double-angle-right"></i>
+									Care Notifications
+								</a>
+							</li>
+							
+							<li>
+								<a href="Admission.html">
+									<i class="icon-double-angle-right"></i>
+									Admissions
+								</a>
+							</li>
+							
+							<li>
+								<a href="Discharge.html">
+									<i class="icon-double-angle-right"></i>
+									Discharges
+								</a>
+							</li>
+							<li>
+								<a href="Medication.html">
+									<i class="icon-double-angle-right"></i>
+									Medication
+								</a>
+							</li>
+							<li>
+								<a href="Disease.html">
+									<i class="icon-double-angle-right"></i>
+									Diseases
+								</a>
+							</li>
+							<li>
+								<a href="Lab-Work.html">
+									<i class="icon-double-angle-right"></i>
+									Lab Work
+								</a>
+							</li>
+							<li>
+								<a href="Appointment.html">
+									<i class="icon-double-angle-right"></i>
+								Appointment
+								</a>
+							</li>
+							<li>
+								<a href="Care-Plan.html">
+									<i class="icon-double-angle-right"></i>
+									Care Plan
+								</a>
+							</li>
+                            <li>
+								<a href="Discharge-Plan.html">
+									<i class="icon-double-angle-right"></i>
+									Discharge Plan
+								</a>
+							</li>
+							
+							
+							
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-edit"></i>
+							<span class="menu-text"> Care Configuration  </span>
+
+							<b class="arrow icon-angle-down"></b>
+						</a>
+                               <ul class="submenu">
+							<li>
+								<a href="Gap-Rule.html">
+									<i class="icon-double-angle-right"></i>
+									Gap Rules
+								</a>
+							</li>
+							
+							<li>
+								<a href="Notification-Rule.html">
+									<i class="icon-double-angle-right"></i>
+									Notification Rules
+								</a>
+							</li>
+							<li>
+								<a href="Rules-Management.html">
+									<i class="icon-double-angle-right"></i>
+									Rules Management
+								</a>
+							</li>
+							
+						</ul>
+					</li>
+																		           
+				    <li>
+						<a href="Reports.html">
+							<i class="icon-list-alt"></i>
+							<span class="menu-text"> Reports </span>
+						</a>
+					</li>
+					
+					<li>
+						<a href="Correspondence.html">
+							<i class="icon-envelope"></i>
+							<span class="menu-text"> Correspondence  </span>
+						</a>
+					</li>
+					
+					<li>
+						<a href="Payment.html">
+							<i class="icon-credit-card"></i>
+							<span class="menu-text"> Payments </span>
+						</a>
+					</li>
+					
+					<li>
+						<a href="HIE.html">
+							<i class="icon-list-alt"></i>
+							<span class="menu-text"> HIE </span>
+						</a>
+					</li>
+					</li>
+					<li>
+												
+					</li>
+				</ul><!--/.nav-list-->
+
+				<div class="sidebar-collapse" id="sidebar-collapse">
+					<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+				</div>
+
+				<script type="text/javascript">
+					try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+				</script>
+			</div>
+
+			<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+					<script type="text/javascript">
+						try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+					</script>
+
+				<ul class="breadcrumb">
+				<li>
+						
+							<a href="Dashboard.html"><i class="orange icon-home bigger-200" ></i></a>
+				
+							<span class="divider">
+								<i class="icon-angle-right arrow-icon"></i>
+							</span>
+						</li>
+
+							<li>
+							<a href="#">Care Coordination</a>
+
+							<span class="divider">
+								<i class="icon-angle-right arrow-icon"></i>
+							</span>
+						</li>
+						<li class="active">Care Plan</li>
+					</ul><!--.breadcrumb-->
+
+					<div class="nav-search" id="nav-search">
+						<form class="form-search">
+							<span class="input-icon">
+								<input type="text" placeholder="Search ..." class="input-small nav-search-input" id="nav-search-input" autocomplete="off" />
+								<i class="icon-search nav-search-icon"></i>
+							</span>
+						</form>
+					</div><!--#nav-search-->
+				</div>
+				<div class="page-content">
+					<div class="row-fluid" style="overflow-x:hidden">
+					
+						<div class="span12">
+	
+								
+	
+<div class="page-header position-relative">
+						<h3>
+					<a href=''>Care Plan</a>
+							
+						</h3>
+					</div>	  
+                  
+											<!--Information Start-->
+										
+					<div id="CareGap" class="tab-pane active">
+							<form class="form-horizontal2">											
+											
+					
+						
+							<!--PAGE CONTENT BEGINS-->
+
+							<table id="grid-table_CareGap"></table>
+
+							<div id="grid-pager_CareGap"></div>
+
+							<script type="text/javascript">
+								var $path_base = "/";//this will be used in gritter Notifications containing images
+							</script>
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+		
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!--page specific plugin scripts-->
+
+		<script src="assets/js/date-time/bootstrap-datepicker.min.js"></script>
+		<script src="assets/js/jqGrid/jquery.jqGrid.min.js"></script>
+		<script src="assets/js/jqGrid/i18n/grid.locale-en.js"></script>
+
+		<!--ace scripts-->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!--inline scripts related to this page-->
+		
+	<div id="CareNotification" class="tab-pane">
+							<form class="form-horizontal2">											
+											
+					
+						
+							<!--PAGE CONTENT BEGINS-->
+
+							<table id="grid-table_CareNotification"></table>
+
+							<div id="grid-pager_CareNotification"></div>
+
+							<script type="text/javascript">
+								var $path_base = "/";//this will be used in gritter Notifications containing images
+							</script>
+
+							<!--PAGE CONTENT ENDS-->
+					<!--Script for the jtable -->
+	
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+		
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!--page specific plugin scripts-->
+
+		<script src="assets/js/date-time/bootstrap-datepicker.min.js"></script>
+		<script src="assets/js/jqGrid/jquery.jqGrid.min.js"></script>
+		<script src="assets/js/jqGrid/i18n/grid.locale-en.js"></script>
+
+		<!--ace scripts-->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		
+
+		<!--inline scripts related to this page-->
+		
+		<script type="text/javascript">
+			var grid_data_CareNotification = 
+			[ 
+		{Notification:"Diabetic Plan",Member:"Smith Roger",Note:"",NotificationDate:"04-24-2011",ContactByDate:"05-24-2011", Contacttype:"Phone",Coordinator:"Dr.Peter Parker",NNo:"1"},
+				
+			];	
+			
+			jQuery(function($) {
+				var grid_selector = "#grid-table_CareNotification";
+				var pager_selector = "#grid-pager_CareNotification";
+			
+				jQuery(grid_selector).jqGrid({
+					//direction: "rtl",
+					
+					data: grid_data_CareNotification,
+					datatype: "local",
+					height: 150,
+					width: 1000,
+				colNames:[ 'Plan','Member','Notes','Plan Date', 'ContactDate','Contact Type','Coordinator','Notification No' ],
+					colModel:[
+
+						{name:'Notification',formatter:'showlink', formatoptions:{baseLinkUrl:'Care-Detail.html'},index:'Notification', width:200,editable: true,editoptions:{size:"20",maxlength:"30"}},
+						{name:'Member',index:'Member',width:150, editable:true, sorttype:"date",unformat: pickDate},
+						{name:'Note',index:'Note', width:200,editable: true,editoptions:{size:"20",maxlength:"30"}},
+						{name:'NotificationDate',index:'NotificationDate', width:170, editable: true,edittype:"checkbox",editoptions: {value:"Yes:No"},unformat: aceSwitch},
+						{name:'ContactByDate',index:'ContactByDate', width:200,editable: true,editoptions:{size:"20",maxlength:"30"}},
+						{name:'Contacttype',index:'Contacttype', width:200,editable: true,editoptions:{size:"20",maxlength:"30"}},
+					    {name:'Coordinator',index:'Coordinator', width:200,editable: true,editoptions:{size:"20",maxlength:"30"}},
+					    {name:'NNo',index:'NNo', width:200,editable: true,editoptions:{size:"20",maxlength:"30"}}
+
+					], 
+			
+					viewrecords : true,
+					rowNum:10,
+					rowList:[10,20,30],
+					pager : pager_selector,
+					altRows: true,
+					//toppager: true,
+					
+					multiselect: true,
+					//multikey: "ctrlKey",
+			        multiboxonly: true,
+			
+					loadComplete : function() {
+						var table = this;
+						setTimeout(function(){
+							styleCheckbox(table);
+							
+							updateActionIcons(table);
+							updatePagerIcons(table);
+							enableTooltips(table);
+						}, 0);
+					},
+			
+					editurl: $path_base+"/dummy.html",//nothing is saved
+					//caption: "Care Notification"
+			
+				});
+			
+				//enable search/filter toolbar
+				//jQuery(grid_selector).jqGrid('filterToolbar',{defaultSearch:true,stringResult:true})
+			
+				//switch element when editing inline
+				function aceSwitch( cellvalue, options, cell ) {
+					setTimeout(function(){
+						$(cell) .find('input[type=checkbox]')
+								.wrap('<label class="inline" />')
+							.addClass('ace ace-switch ace-switch-5')
+							.after('<span class="lbl"></span>');
+					}, 0);
+				}
+				//enable datepicker
+				function pickDate( cellvalue, options, cell ) {
+					setTimeout(function(){
+						$(cell) .find('input[type=text]')
+								.datepicker({format:'yyyy-mm-dd' , autoclose:true}); 
+					}, 0);
+				}
+			
+			
+				//navButtons
+				jQuery(grid_selector).jqGrid('navGrid',pager_selector,
+					{ 	//navbar options
+						edit: true,
+						editicon : 'icon-pencil blue',
+						add: true,
+						addicon : 'icon-plus-sign purple',
+						del: true,
+						delicon : 'icon-trash red',
+						search: true,
+						searchicon : 'icon-search orange',
+						refresh: true,
+						refreshicon : 'icon-refresh green',
+						view: true,
+						viewicon : 'icon-zoom-in grey',
+					},
+					{
+						//edit record form
+						//closeAfterEdit: true,
+						recreateForm: true,
+						beforeShowForm : function(e) {
+							var form = $(e[0]);
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+							style_edit_form(form);
+						}
+					},
+					{
+						//new record form
+						closeAfterAdd: true,
+						recreateForm: true,
+						viewPagerButtons: false,
+						beforeShowForm : function(e) {
+							var form = $(e[0]);
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+							style_edit_form(form);
+						}
+					},
+					{
+						//delete record form
+						recreateForm: true,
+						beforeShowForm : function(e) {
+							var form = $(e[0]);
+							if(form.data('styled')) return false;
+							
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+							style_delete_form(form);
+							
+							form.data('styled', true);
+						},
+						onClick : function(e) {
+							Notification(1);
+						}
+					},
+					{
+						//search form
+						recreateForm: true,
+						afterShowSearch: function(e){
+							var form = $(e[0]);
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-title').wrap('<div class="widget-header" />')
+							style_search_form(form);
+						},
+						afterRedraw: function(){
+							style_search_filters($(this));
+						}
+						,
+						multipleSearch: true,
+						/**
+						multipleGroup:true,
+						showQuery: true
+						*/
+					},
+					{
+						//view record form
+						recreateForm: true,
+						beforeShowForm: function(e){
+							var form = $(e[0]);
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-title').wrap('<div class="widget-header" />')
+						}
+					}
+				)
+			
+			
+				
+				function style_edit_form(form) {
+					//enable datepicker on "sdate" field and switches for "stock" field
+					form.find('input[name=sdate]').datepicker({format:'yyyy-mm-dd' , autoclose:true})
+						.end().find('input[name=stock]')
+							  .addClass('ace ace-switch ace-switch-5').wrap('<label class="inline" />').after('<span class="lbl"></span>');
+			
+					//update buttons classes
+					var buttons = form.next().find('.EditButton .fm-button');
+					buttons.addClass('btn btn-small').find('[class*="-icon"]').remove();//ui-icon, s-icon
+					buttons.eq(0).addClass('btn-primary').prepend('<i class="icon-ok"></i>');
+					buttons.eq(1).prepend('<i class="icon-remove"></i>')
+					
+					buttons = form.next().find('.navButton a');
+					buttons.find('.ui-icon').remove();
+					buttons.eq(0).append('<i class="icon-chevron-left"></i>');
+					buttons.eq(1).append('<i class="icon-chevron-right"></i>');		
+				}
+			
+				function style_delete_form(form) {
+					var buttons = form.next().find('.EditButton .fm-button');
+					buttons.addClass('btn btn-small').find('[class*="-icon"]').remove();//ui-icon, s-icon
+					buttons.eq(0).addClass('btn-danger').prepend('<i class="icon-trash"></i>');
+					buttons.eq(1).prepend('<i class="icon-remove"></i>')
+				}
+				
+				function style_search_filters(form) {
+					form.find('.delete-rule').val('X');
+					form.find('.add-rule').addClass('btn btn-small btn-primary');
+					form.find('.add-group').addClass('btn btn-small btn-success');
+					form.find('.delete-group').addClass('btn btn-small btn-danger');
+				}
+				function style_search_form(form) {
+					var dialog = form.closest('.ui-jqdialog');
+					var buttons = dialog.find('.EditTable')
+					buttons.find('.EditButton a[id*="_reset"]').addClass('btn btn-small btn-info').find('.ui-icon').attr('class', 'icon-retweet');
+					buttons.find('.EditButton a[id*="_query"]').addClass('btn btn-small btn-inverse').find('.ui-icon').attr('class', 'icon-comment-alt');
+					buttons.find('.EditButton a[id*="_search"]').addClass('btn btn-small btn-purple').find('.ui-icon').attr('class', 'icon-search');
+				}
+				
+				function beforeDeleteCallback(e) {
+					var form = $(e[0]);
+					if(form.data('styled')) return false;
+					
+					form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+					style_delete_form(form);
+					
+					form.data('styled', true);
+				}
+				
+				function beforeEditCallback(e) {
+					var form = $(e[0]);
+					form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+					style_edit_form(form);
+				}
+			
+			
+			
+				//it causes some flicker when reloading or navigating grid
+				//it may be possible to have some custom formatter to do this as the grid is being created to prevent this
+				//or go back to default browser checkbox styles for the grid
+				function styleCheckbox(table) {
+				/**
+					$(table).find('input:checkbox').addClass('ace')
+					.wrap('<label />')
+					.after('<span class="lbl align-top" />')
+			
+			
+					$('.ui-jqgrid-labels th[id*="_cb"]:first-child')
+					.find('input.cbox[type=checkbox]').addClass('ace')
+					.wrap('<label />').after('<span class="lbl align-top" />');
+				*/
+				}
+				
+			
+				//unlike navButtons icons, action icons in rows seem to be hard-coded
+				//you can change them like this in here if you want
+				function updateActionIcons(table) {
+					/**
+					var replacement = 
+					{
+						'ui-icon-pencil' : 'icon-pencil blue',
+						'ui-icon-trash' : 'icon-trash red',
+						'ui-icon-disk' : 'icon-ok green',
+						'ui-icon-cancel' : 'icon-remove red'
+					};
+					$(table).find('.ui-pg-div span.ui-icon').each(function(){
+						var icon = $(this);
+						var $class = $.trim(icon.attr('class').replace('ui-icon', ''));
+						if($class in replacement) icon.attr('class', 'ui-icon '+replacement[$class]);
+					})
+					*/
+				}
+				
+				//replace icons with FontAwesome icons like above
+				function updatePagerIcons(table) {
+					var replacement = 
+					{
+						'ui-icon-seek-first' : 'icon-double-angle-left bigger-140',
+						'ui-icon-seek-prev' : 'icon-angle-left bigger-140',
+						'ui-icon-seek-next' : 'icon-angle-right bigger-140',
+						'ui-icon-seek-end' : 'icon-double-angle-right bigger-140'
+					};
+					$('.ui-pg-table:not(.navtable) > tbody > tr > .ui-pg-button > .ui-icon').each(function(){
+						var icon = $(this);
+						var $class = $.trim(icon.attr('class').replace('ui-icon', ''));
+						
+						if($class in replacement) icon.attr('class', 'ui-icon '+replacement[$class]);
+					})
+				}
+			
+				function enableTooltips(table) {
+					$('.navtable .ui-pg-button').tooltip({container:'body'});
+					$(table).find('.ui-pg-div').tooltip({container:'body'});
+				}
+			
+				//var selr = jQuery(grid_selector).jqGrid('getGridParam','selrow');
+			$.extend($.jgrid.search, {multipleSearch: true, multipleGroup: true, overlay: 0});
+   jQuery(grid_selector).jqGrid('searchGrid');
+            
+             var gridSelector = "grid-table_CareNotification",  
+                $searchDialog = $("#searchmodfbox_" + gridSelector),
+                $gbox = $("#gbox_" + gridSelector);
+
+            // hide 'close' button of the searching dialog
+            $searchDialog.find("a.ui-jqdialog-titlebar-close").hide();
+
+            // place the searching dialog above the grid
+            $searchDialog.insertBefore($gbox);
+            $searchDialog.css({position: "relative", "z-index": "auto", float: "left", top: "-20px"});
+    $gbox.css({clear:"left"});
+   var buttons = $searchDialog.find('.EditTable')
+     buttons.find('.EditButton a[id*="_reset"]').addClass('btn btn-small btn-info').find('.ui-icon').attr('class', 'icon-retweet');
+     buttons.find('.EditButton a[id*="_query"]').addClass('btn btn-small btn-inverse').find('.ui-icon').attr('class', 'icon-comment-alt');
+     buttons.find('.EditButton a[id*="_search"]').addClass('btn btn-small btn-purple').find('.ui-icon').attr('class', 'icon-search');
+			
+			});
+		</script>
+		
+				
+	             </div>
+	
+            </div>
+					
+		</div>
+
+							<script type="text/javascript">
+								var $path_assets = "assets";//this will be used in gritter Notifications containing images
+							</script>
+
+							<!--PAGE CONTENT ENDS-->
+						</div><!--/.span-->
+					</div><!--/.row-fluid-->
+				</div><!--/.page-content-->
+
+				<div class="ace-settings-container" id="ace-settings-container">
+					
+					<div class="ace-settings-box" id="ace-settings-box">
+						<div>
+							<div class="pull-left">
+								<select id="skin-colorpicker" class="hide">
+									<option data-skin="default" value="#438EB9">#438EB9</option>
+									<option data-skin="skin-1" value="#222A2D">#222A2D</option>
+									<option data-skin="skin-2" value="#C6487E">#C6487E</option>
+									<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+								</select>
+							</div>
+							<span>&nbsp; Choose Skin</span>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-navbar" />
+							<label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar" />
+							<label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-breadcrumbs" />
+							<label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" />
+							<label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
+						</div>
+					</div>
+				</div><!--/#ace-settings-container-->
+			</div><!--/.main-content-->
+		</div><!--/.main-container-->
+
+			
+	<footer id="footer" class="grid-block center">
+	                
+							<a id="totop-scroller" href="#page"></a>
+							<div class="muted">
+							
+			                 <small>@2013 Copyright Synergy Payer Solutions. All rights reserved.</small>		
+                            </div>	
+
+
+		
+	
+		
+	</body>
+</html>

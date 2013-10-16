@@ -1,0 +1,244 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Login Page - Aco Admin</title>
+
+		<meta name="description" content="User login page" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!--basic styles-->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!--page specific plugin styles-->
+
+		<!--fonts-->
+
+		<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+		
+
+		<!--ace styles-->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-responsive.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!--inline styles related to this page-->
+
+		<!--ace settings handler-->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+		<style>
+		
+	 
+	
+
+	
+		
+		
+	.widget-body1
+	{
+   	top: 20%;
+	right: 10%;
+    position: absolute;
+    overflow: hidden;
+    width: 20%;
+	border-top: 10px
+    box-shadow: none;
+    padding: 6px;
+    background-color: #a6e3ff;
+	}
+
+		.auto-style1 {
+	color: #4B0082;
+}
+
+		</style>
+	
+	</head>
+
+	<body>
+
+			<div class="navbar-inner">
+				<div class="container-fluid">
+		
+					<h2>
+							&nbsp;</img><font size="6" color="Indigo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><span class="auto-style1"><font size="6">Synergy 
+							Payer Accountable Coalition</font></span></h2>
+
+					<ul class="nav ace-nav pull-right">
+						
+<div class="main-content">
+
+	<div class="widget-body1">
+	<div class="widget-main1">
+		
+	
+	<img src="assets/images/gallery/nursing_staff1.jpg" alt="Smiley face" height="420" width="420"> </img>
+												<form>
+													<fieldset>
+														<label> 	<span class="lbl"> Login</span>
+															<span class="block input-icon input-icon-right">
+																<input type="text" id="username" name="username" class="span2"  />
+																<i class="icon-user green"></i>
+															</span>
+															</label>
+
+														<label> <span class="lbl">Password</span>
+															<span class="block input-icon input-icon-right">
+																<input type="password" id="password" name="password" class="span2"  />
+																<i class="icon-lock green"></i>
+															</span>
+														</label>
+
+														<label><span class="lbl"> Role</span>
+														<span class="block input-icon input-icon-right">
+														<select id="role" name="form-field-select-1" class="span2">
+															<option value="nurse">Care Coordinator</option>
+															<option value="admin">ACO Admin</option>
+														</select>
+															<i class="icon-male green"></i>
+														</label>
+														<div class="space"></div>
+
+														<div class="clearfix">
+															<label class="inline">
+																<input type="checkbox" class="ace" />
+																<span class="lbl"> Remember Me</span>
+															</label>
+
+															<button  id="button1" name="button1" class="width-15 pull-right btn btn-small btn-primary">
+																<i class="icon-key"></i>
+																Login
+															</button>
+															
+															</div>
+															</span>
+															</div>
+															
+														</div>
+														
+														
+														<script src='assets/js/jquery-2.0.3.min.js'> </script>
+														<script >
+										$(document).ready(function() {
+													var tusername = "";
+													var tpassword = "";
+													 checkval = false;
+													$.getJSON('test.json', function(data) 
+															{
+																$.each(data,function(i,obj)
+																{
+																    tusername = obj.username;
+																	tpassword = obj.password;
+																});
+																
+															});
+													$("#button1").click(function(){
+													 
+													var name1 = $("#username").val();
+													var line1 = $("#password").val();
+													var role = $("#role").val();
+													     
+														 if(name1 == tusername  && line1 == tpassword  && role == "admin")
+														{
+														 											   
+                                                         
+														   window.location.href ="Dashboard.html";
+														   
+														   return false;
+														}
+														else if (name1 == tusername  && line1 == tpassword  && role == "nurse")
+														{
+														 													   
+
+														   window.location.href ="N-Dashboard.html";
+														   return false;
+														}
+													else
+														{
+														
+														
+														alert("Incorrect Login");
+														}
+
+																});
+															
+
+																													
+																	});
+                                                      
+                                                         </script>
+
+														<div class="space-4"></div>
+													</fieldset>
+												</form>
+												
+												</div>
+
+
+																		
+											
+
+					</ul><!--/.ace-nav-->
+				</div><!--/.container-fluid-->
+			</div><!--/.navbar-inner-->
+			<div class="page-content">
+										<img src="assets/images/gallery/Medicare.jpg"  height="1000" width="900"> </img>
+														</div>
+		</div>
+	
+									
+		<!--basic scripts-->
+
+		<!--[if !IE]>-->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!--<![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!--page specific plugin scripts-->
+
+		<!--ace scripts-->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!--inline scripts related to this page-->
+
+		<script type="text/javascript">
+			function show_box(id) {
+			 jQuery('.widget-box.visible').removeClass('visible');
+			 jQuery('#'+id).addClass('visible');
+			}
+		</script>
+		
+	</body>
+</html>

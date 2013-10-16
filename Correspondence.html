@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>ACO </title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	
+		
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+<link rel="stylesheet" href="assets/css/jquery.gritter.css" />
+<link rel="stylesheet" href="assets/css/jquery-ui-1.10.3.custom.min.css" />
+		<link rel="stylesheet" href="assets/css/datepicker.css" />
+		<link rel="stylesheet" href="assets/css/ui.jqgrid.css" />
+
+		<!--fonts-->
+
+		<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+
+		<!--ace styles-->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-responsive.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+<style>
+#gallery { float: right; width: 35%; min-height: 12em; }
+.gallery.custom-state-active { background: #eee; }	
+.gallery li { float: left; width: 96px; padding: 0.4em; margin: 0 0.4em 0.4em 0; text-align: center; }
+.gallery li h5 { margin: 0 0 0.4em; cursor: move; }
+.gallery li a { float: right; }
+.gallery li a.ui-icon-zoomin { float: left; }
+.gallery li img { width: 100%; cursor: move; }
+#trash { float: left; width: 100%; min-height: 18em; padding: 1%; }
+#trash h4 { line-height: 16px; margin: 0 0 0.4em; }
+
+#trash .gallery h5 { display: none; }
+</style>
+<script>
+$(function() {
+// there's the gallery and the trash
+var $gallery = $( "#gallery" ),
+$trash = $( "#trash" );
+// let the gallery items be draggable
+$( "li", $gallery ).draggable({
+cancel: "a.ui-icon", // clicking an icon won't initiate dragging
+revert: "invalid", // when not dropped, the item will revert back to its initial position
+containment: "document",
+helper: "clone",
+cursor: "move"
+});
+// let the trash be droppable, accepting the gallery items
+$trash.droppable({
+accept: "#gallery > li",
+activeClass: "ui-state-highlight",
+drop: function( event, ui ) {
+deleteImage( ui.draggable );
+}
+});
+// let the gallery be droppable as well, accepting items from the trash
+$gallery.droppable({
+accept: "#trash li",
+activeClass: "custom-state-active",
+drop: function( event, ui ) {
+recycleImage( ui.draggable );
+}
+});
+// image deletion function
+var recycle_icon = "<a href='link/to/recycle/script/when/we/have/js/off' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
+function deleteImage( $item ) {
+$item.fadeOut(function() {
+var $list = $( "ul", $trash ).length ?
+$( "ul", $trash ) :
+$( "<ul class='gallery ui-helper-reset'/>" ).appendTo( $trash );
+$item.find( "a.ui-icon-trash" ).remove();
+$item.append( recycle_icon ).appendTo( $list ).fadeIn(function() {
+$item
+.animate({ width: "48px" })
+.find( "img" )
+.animate({ height: "36px" });
+});
+});
+}
+// image recycle function
+var trash_icon = "<a href='link/to/trash/script/when/we/have/js/off' title='Delete this image' class='ui-icon ui-icon-trash'>Delete image</a>";
+function recycleImage( $item ) {
+$item.fadeOut(function() {
+$item
+.find( "a.ui-icon-refresh" )
+.remove()
+.end()
+.css( "width", "96px")
+.append( trash_icon )
+.find( "img" )
+.css( "height", "72px" )
+.end()
+.appendTo( $gallery )
+.fadeIn();
+});
+}
+// image preview function, demonstrating the ui.dialog used as a modal window
+function viewLargerImage( $link ) {
+var src = $link.attr( "href" ),
+title = $link.siblings( "img" ).attr( "alt" ),
+$modal = $( "img[src$='" + src + "']" );
+if ( $modal.length ) {
+$modal.dialog( "open" );
+} else {
+var img = $( "<img alt='" + title + "' width='384' height='288' style='display: none; padding: 8px;' />" )
+.attr( "src", src ).appendTo( "body" );
+setTimeout(function() {
+img.dialog({
+title: title,
+width: 400,
+modal: true
+});
+}, 1 );
+}
+}
+// resolve the icons behavior with event delegation
+$( "ul.gallery > li" ).click(function( event ) {
+var $item = $( this ),
+$target = $( event.target );
+if ( $target.is( "a.ui-icon-trash" ) ) {
+deleteImage( $item );
+} else if ( $target.is( "a.ui-icon-zoomin" ) ) {
+viewLargerImage( $target );
+} else if ( $target.is( "a.ui-icon-refresh" ) ) {
+recycleImage( $item );
+}
+return false;
+});
+
+
+$( "#dialog-form" ).dialog({
+autoOpen: false,
+height: 300,
+width: 350,
+modal: true,
+buttons: {
+
+},
+close: function() {
+allFields.val( "" ).removeClass( "ui-state-error" );
+}
+});
+$( "#create-user" )
+.button()
+.click(function() {
+$( "#dialog-form" ).dialog( "open" );
+});
+});
+</script>
+</head>
+<body>
+
+<div class="ui-widget ui-helper-clearfix">
+<ul id="gallery" class="gallery ui-helper-reset ui-helper-clearfix">
+<li class="ui-widget-content ui-corner-tr">
+<h5 class="ui-widget-header">Cover Letter</h5>
+<img src="images//high_tatras_min.jpg" alt="Description of Benefits" width="96" height="72" />
+
+
+</li>
+<li class="ui-widget-content ui-corner-tr">
+<h5 class="ui-widget-header">Medicare</h5>
+<img src="images/high_tatras2_min.jpg" alt="Medicare Summary Template" width="96" height="72" />
+
+
+</li>
+<li class="ui-widget-content ui-corner-tr">
+<h5 class="ui-widget-header">Cover Letter</h5>
+<img src="images/high_tatras_min.jpg" alt="Description of Benefits" width="96" height="72" />
+
+
+</li>
+<li class="ui-widget-content ui-corner-tr">
+<h5 class="ui-widget-header">Cover Letter</h5>
+<img src="images/high_tatras_min.jpg" alt="Description of Benefits" width="96" height="72" />
+
+
+</li>
+<li class="ui-widget-content ui-corner-tr">
+<h5 class="ui-widget-header">Cover Letter</h5>
+<img src="images/high_tatras_min.jpg" alt="Description of Benefits" width="96" height="72" />
+
+
+</li>
+<li class="ui-widget-content ui-corner-tr">
+<h5 class="ui-widget-header">Cover Letter</h5>
+<img src="images/high_tatras_min.jpg" alt="Description of Benefits" width="96" height="72" />
+
+
+</li>
+<li class="ui-widget-content ui-corner-tr">
+<h5 class="ui-widget-header">ACO Letter</h5>
+<img src="images/high_tatras3_min.jpg" alt="ACO letter Template" width="96" height="72" />
+
+
+</li>
+<li class="ui-widget-content ui-corner-tr">
+<h5 class="ui-widget-header">Facility Letter</h5>
+<img src="images/high_tatras4_min.jpg" alt="Shared Savings Template" width="96" height="72" />
+
+</li>
+
+</ul>
+<div class="row-fluid">
+									
+										
+										
+												<a href="#write" data-target="write" class="btn-new-mail">
+													
+													<button id="create-user" type="button" class="btn btn-small">
+											<i class="icon-paper-clip bigger-140"></i>
+											Search Recipients
+										</button>
+												</a>
+
+</div>
+											
+
+
+							<form id="id-message-form" class="hide form-horizontal message-form">
+							<div class="hr hr-16 dotted"></div>
+								<div class="control-group">
+									<label class="control-label" for="form-field-recipient">Recipient:</label>
+
+									<div class="controls">
+										<span class="input-icon">
+											<input type="email" name="recipient" id="form-field-recipient" data-value="" value="alex@doe.com" placeholder="Recipient(s)" />
+											<i class="icon-user"></i>
+										</span>
+									</div>
+								</div>
+
+								<div class="hr hr-16 dotted"></div>
+
+								<div class="control-group">
+									<label class="control-label" for="form-field-subject">Subject:</label>
+
+									<div class="controls">
+										<span class="input-icon span8">
+											<input maxlength="100" type="text" class="span12" name="subject" id="form-field-subject" placeholder="Subject" />
+											<i class="icon-comment-alt"></i>
+										</span>
+									</div>
+								</div>
+
+								<div class="hr hr-16 dotted"></div>
+
+								<div class="control-group">
+									<label class="control-label">
+										<span class="inline space-16 hidden-480"></span>
+										Message:
+									</label>
+
+									<div class="controls">
+										<div  id="trash"  class="wysiwyg-editor"></div>
+									</div>
+								</div>
+
+								<div class="hr hr-16 dotted"></div>
+
+								<div class="control-group no-margin-bottom">
+									
+
+									<div class="controls">
+										<div id="form-attachments">
+											<input type="file" name="attachment[]" />
+										</div>
+									</div>
+								</div>
+
+					            
+								<div class="control-group">
+								
+									<div class="align-right">
+										<button id="id-add-attachment" type="button" class="btn btn-small btn-danger">
+											<i class="icon-paper-clip bigger-140"></i>
+											Add Attachment
+										</button>
+								
+										<button id="id-back" type="button" class="btn btn-small btn-success">
+										     <a href="View-Member.html">
+											<i class="icon-mail bigger-140"></i>
+											Send
+										</button>
+										<button id="id-back" type="button" class="btn btn-small btn-warning">
+											<i class="icon-mail bigger-140"></i>
+											Back
+										</button>
+									</div>
+								</div>
+							</form>
+							
+</div>
+</div>
+		<div id="dialog-form"  class="modal hide">
+
+					
+							<form class="form-horizontal">
+							
+							    <div class="control-group">
+									
+								</div>
+								<div class="control-group">
+									<label class="control-label" for="form-field-1">Name</label>																											
+									<div class="controls">
+										<input type="text" id="form-field-1" placeholder="Name" />
+									</div>
+								</div>
+								
+								<div class="control-group">
+									<label class="control-label" for="form-field-1">Member No</label>																											
+									<div class="controls">
+										<input type="text" id="form-field-1" placeholder="Member No" />
+									</div>
+								</div>
+								
+								
+								<div class="control-group">
+									<label class="control-label" for="form-field-1">Tax Id</label>																											
+									<div class="controls">
+										<input type="text" id="form-field-1" placeholder="Tax Id" />
+									</div>
+								</div>
+								
+								
+								<div class="control-group">
+									<label class="control-label" for="form-field-1">NPI</label>																											
+									<div class="controls">
+										<input type="text" id="form-field-1" placeholder="NPI" />
+									</div>
+								</div>
+								
+								
+								<div class="control-group">
+									<label class="control-label" for="form-field-1">Alias Name</label>																											
+									<div class="controls">
+										<input type="text" id="form-field-1" placeholder="Alias Name" />
+									</div>
+								</div>
+								
+								
+								<div class="control-group">
+									<label class="control-label" for="form-field-1">Member Type</label>																											
+									<div class="controls">
+										<input type="text" id="form-field-1" placeholder="Member Type" />
+									</div>
+								</div>
+								
+								
+								
+								<a href="Correspondence.html" class="btn btn-primary" style="float: right;" >Add to Mail </a>
+								<a href="Correspondence.html" " style="float: right;" > </a>
+                              <a></a>							  
+									<div class="control-group">
+									
+									</div>
+								</div>
+								       
+								</div>
+								
+								
+								
+								</form>
+</div>									
+		
+	<footer id="footer" class="grid-block center">
+	                
+							<a id="totop-scroller" href="#page"></a>
+							<div class="muted">
+							
+			                 <small>@2013 Copyright Synergy Payer Solutions. All rights reserved.</small>		
+                            </div>	
+
+</body>
+</html>

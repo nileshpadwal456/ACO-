@@ -1,0 +1,4336 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Synergy ACO Platform</title>
+
+		<meta name="description" content="Common UI Features &amp; Elements" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!--basic styles-->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<!-- Include one of jTable styles. -->
+       
+ 
+<!-- Include jTable script file. -->
+    
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!--page specific plugin styles-->
+
+		<link rel="stylesheet" href="assets/css/jquery-ui-1.10.3.custom.min.css" />
+		<link rel="stylesheet" href="assets/css/jquery.gritter.css" />
+		<link rel="stylesheet" href="assets/css/datepicker.css" />
+		<link rel="stylesheet" href="assets/css/ui.jqgrid.css" />
+
+		<!--fonts-->
+
+		<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+
+		<!--ace styles-->
+
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-responsive.min.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!--inline styles related to this page-->
+   <style type="text/css">
+        
+        .ui-jqgrid tr.ui-row-ltr td { border-right-color: transparent; }
+        .ui-jqgrid tr.ui-row-ltr td { border-bottom-color: transparent; }
+        /*.ui-jqgrid { border-width: 0px; }*/
+        .ui-jqgrid { border-right-width: 0px; border-left-width: 0px; }
+        th.ui-th-column { border-right-color: transparent !important }
+               th.ui-th-column { border-right-color: transparent}
+    </style>
+
+		<style>
+			.spinner-preview {
+				width:100px;
+				height:100px;
+				text-align:center;
+				margin-top:60px;
+			}
+			.widget-box1 {
+				width:330px;
+				height:300px;
+				text-align:center;
+				margin-top: 5px;
+				margin-left: -30px;
+			}
+			.widget-box2 {
+				width:330px;
+				height:300px;
+				text-align:center;
+				margin-top: 5px;
+				margin-left: 0 px;
+			}
+			
+			
+			.widget-box3 {
+				width:340px;
+				width:340px;
+				height:300px;
+				text-align:center;
+				margin-top: 5px;
+				margin-left: 0 px;
+			}
+			.main-content1 {
+				margin-left:0px;
+				margin-top: 0 px;
+				text-align: left;
+				}
+							
+			.dropdown-preview {
+				margin:0 5px;
+				display:inline-block;
+			}
+			.dropdown-preview  > .dropdown-menu {
+				display: block;
+				position: static;
+				margin-bottom: 5px;
+			}
+			
+		</style>
+
+	<!--ace settings handler-->
+
+	    <script>
+           function myFunction()
+             {
+               Notification("Created Successfully!");
+             }
+        </script>
+	
+		<script src="assets/js/ace-extra.min.js"></script>
+		
+	</head>
+
+	<body>
+		<div class="navbar" id="navbar">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-inner">
+				<div class="container-fluid">
+					<a href="#" class="brand">
+						<small>
+							<i class="icon-leaf"></i>
+							Synergy Accountable Care Coalition
+						</small>
+					</a><!--/.brand-->
+					<ul class="nav ace-nav pull-right">
+					
+						<li class="light-blue">
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+							
+								<span class="user-info">
+									<small>Welcome,</small>
+									Nutan345
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer">
+								<li>
+									<a href="#">
+										<i class="icon-cog"></i>
+										Settings
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="icon-user"></i>
+										Profile
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+								
+								
+									<a href="Index.html">
+										<i class="icon-off"></i>
+										Logout
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!--/.ace-nav-->
+				</div><!--/.container-fluid-->
+			</div><!--/.navbar-inner-->
+		</div>
+
+		<div class="main-container container-fluid">
+			<a class="menu-toggler" id="menu-toggler" href="#">
+				<span class="menu-text"></span>
+			</a>
+
+			<div class="sidebar" id="sidebar">
+				<script type="text/javascript">
+					try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+				</script>
+
+				<div class="sidebar-shortcuts" id="sidebar-shortcuts">
+						
+
+					<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+						<span class="btn btn-success"></span>
+
+						<span class="btn btn-info"></span>
+
+						<span class="btn btn-warning"></span>
+
+						<span class="btn btn-danger"></span>
+					</div>
+				</div><!--#sidebar-shortcuts-->
+
+		<ul class="nav nav-list">
+					
+				<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-h-sign"></i>
+							<span class="menu-text"> ACO Management </span>
+							<b class="arrow icon-angle-down"></b>
+						</a>
+						<ul class="submenu">
+						
+						
+						    <li>
+								<a href="ACO-Information.html">
+									<i class="icon-double-angle-right"></i>
+									ACO Information
+								</a>
+							</li>
+							<li>
+								<a href="ACO-Governance.html">
+									<i class="icon-double-angle-right"></i>
+									AGO Governing Body
+								</a>
+							</li>
+							<li>
+								<a href="Financial.html">
+									<i class="icon-double-angle-right"></i>
+									ACO Financials
+								</a>
+							</li>
+								
+							<li>
+								<a href="ACO-List.html">
+									<i class="icon-double-angle-right"></i>
+								Other ACO's
+								</a>
+							</li>
+						    <li>
+								<a href="Role-Management.html">
+									<i class="icon-double-angle-right"></i>
+									Role Management
+								</a>
+							</li>
+							
+							 <li>
+								<a href="User-Management.html">
+									<i class="icon-double-angle-right"></i>
+									User Management
+								</a>
+							</li>
+							
+							
+						
+						</ul>
+					</li>
+   				<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-hospital"></i>
+							<span class="menu-text"> Facilities </span>
+
+							<b class="arrow icon-angle-down"></b>
+						</a>
+
+						<ul class="submenu">
+							<li>
+								<a href="Search-Facility.html">
+									<i class="icon-double-angle-right"></i>
+									Search Facilities
+								</a>
+							</li>
+
+							<li>
+								<a href="Create-Facility.html">
+									<i class="icon-double-angle-right"></i>
+									Create Facilities
+								</a>
+							</li>
+					</ul>
+				</li>
+			<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-stethoscope"></i>
+							<span class="menu-text"> Providers </span>
+
+							<b class="arrow icon-angle-down"></b>
+						</a>
+
+						<ul class="submenu">
+							<li>
+								<a href="Search-Providers.html">
+									<i class="icon-double-angle-right"></i>
+									Search Providers 
+								</a>
+							</li>
+							<li>
+								<a href="Create-Providers.html">
+									<i class="icon-double-angle-right"></i>
+									Create Providers 
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-list"></i>
+							<span class="menu-text"> Contracts </span>
+
+							<b class="arrow icon-angle-down"></b>
+						</a>
+							<ul class="submenu">
+							<li>
+								<a href="ACO-Contracts.html">
+									<i class="icon-double-angle-right"></i>
+									ACO Contracts
+								</a>
+							</li>
+
+							<li>
+								<a href="Facility-Contracts.html">
+									<i class="icon-double-angle-right"></i>
+									Facility Contracts
+								</a>
+							</li>
+						</ul>
+					</li>										
+					<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-female"></i>
+							<span class="menu-text"> Members </span>
+
+							<b class="arrow icon-angle-down"></b>
+						</a>
+                               <ul class="submenu">
+							<li>
+								<a href="Search-Member.html">
+									<i class="icon-double-angle-right"></i>
+									Search Members
+								</a>
+							</li>
+
+							<li>
+								<a href="Create-Member.html">
+									<i class="icon-double-angle-right"></i>
+									Create Members
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-user-md"></i>
+							<span class="menu-text"> Care Coordination </span>
+
+							<b class="arrow icon-angle-down"></b>
+						</a>
+
+						<ul class="submenu">
+							<li>
+								<a href="Care-Gap.html">
+									<i class="icon-double-angle-right"></i>
+									Care Gaps
+								</a>
+							</li>
+
+							<li>
+								<a href="Care-Notification.html">
+									<i class="icon-double-angle-right"></i>
+									Care Notifications
+								</a>
+							</li>
+							
+							<li>
+								<a href="Admission.html">
+									<i class="icon-double-angle-right"></i>
+									Admissions
+								</a>
+							</li>
+							
+							<li>
+								<a href="Discharge.html">
+									<i class="icon-double-angle-right"></i>
+									Discharges
+								</a>
+							</li>
+							<li>
+								<a href="Medication.html">
+									<i class="icon-double-angle-right"></i>
+									Medication
+								</a>
+							</li>
+							<li>
+								<a href="Disease.html">
+									<i class="icon-double-angle-right"></i>
+									Diseases
+								</a>
+							</li>
+							<li>
+								<a href="Lab-Work.html">
+									<i class="icon-double-angle-right"></i>
+									Lab Work
+								</a>
+							</li>
+							<li>
+								<a href="Appointment.html">
+									<i class="icon-double-angle-right"></i>
+								Appointment
+								</a>
+							</li>
+							<li>
+								<a href="Care-Plan.html">
+									<i class="icon-double-angle-right"></i>
+									Care Plan
+								</a>
+							</li>
+                            <li>
+								<a href="Discharge-Plan.html">
+									<i class="icon-double-angle-right"></i>
+									Discharge Plan
+								</a>
+							</li>
+							
+							
+							
+						</ul>
+					</li>
+						<li>
+						<a href="#" class="dropdown-toggle">
+							<i class="icon-edit"></i>
+							<span class="menu-text"> Care Configuration  </span>
+
+							<b class="arrow icon-angle-down"></b>
+						</a>
+                               <ul class="submenu">
+							<li>
+								<a href="Gap-Rule.html">
+									<i class="icon-double-angle-right"></i>
+									Gap Rules
+								</a>
+							</li>
+							
+							<li>
+								<a href="Notification-Rule.html">
+									<i class="icon-double-angle-right"></i>
+									Notification Rules
+								</a>
+							</li>
+							<li>
+								<a href="Rules-Management.html">
+									<i class="icon-double-angle-right"></i>
+									Rules Management
+								</a>
+							</li>
+						
+						</ul>
+					</li>
+																		           
+				    <li>
+						<a href="Reports.html">
+							<i class="icon-list-alt"></i>
+							<span class="menu-text"> Reports </span>
+						</a>
+					</li>
+					
+					<li>
+						<a href="Correspondence.html">
+							<i class="icon-envelope"></i>
+							<span class="menu-text"> Correspondence  </span>
+						</a>
+					</li>
+					
+					<li>
+						<a href="Payment.html">
+							<i class="icon-credit-card"></i>
+							<span class="menu-text"> Payments </span>
+						</a>
+					</li>
+					
+					<li>
+						<a href="HIE.html">
+							<i class="icon-list-alt"></i>
+							<span class="menu-text"> HIE </span>
+						</a>
+					</li>
+					</li>
+					<li>
+												
+					</li>
+				</ul><!--/.nav-list-->
+
+				<div class="sidebar-collapse" id="sidebar-collapse">
+					<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+				</div>
+
+				<script type="text/javascript">
+					try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+				</script>
+			</div>
+
+			<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+					<script type="text/javascript">
+						try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+					</script>
+
+					<ul class="breadcrumb">
+				<li>
+						
+							<a href="Dashboard.html"><i class="orange icon-home bigger-200" ></i></a>
+				
+							<span class="divider">
+								<i class="icon-angle-right arrow-icon"></i>
+							</span>
+						</li>
+	                    <li>
+							<a href="#">Facilities</a>
+
+							<span class="divider">
+								<i class="icon-angle-right arrow-icon"></i>
+							</span>
+						</li>
+							<li>
+							<a href="Search-Facilities.html">Search Facilities</a>
+
+							<span class="divider">
+								<i class="icon-angle-right arrow-icon"></i>
+							</span>
+						</li>
+						<li class="active">View Facilities</li>
+					</ul><!--.breadcrumb-->
+
+					<div class="nav-search" id="nav-search">
+						<form class="form-search">
+							<span class="input-icon">
+								<input type="text" placeholder="Search ..." class="input-small nav-search-input" id="nav-search-input" autocomplete="off" />
+								<i class="icon-search nav-search-icon"></i>
+							</span>
+						</form>
+					</div><!--#nav-search-->
+				</div>
+				<div class="page-content">
+					<div class="page-header position-relative">
+						<h1>
+					View Facilities 
+							
+						</h1>
+					</div><!--/.page-header-->
+
+					<div class="row-fluid" style="overflow-x:hidden">
+					
+						<div class="span12">
+							<!--PAGE CONTENT BEGINS-->
+
+							<div class="row-fluid">
+								<div class="span6">
+									<div class="tabbable">
+										<ul class="nav nav-tabs padding-18 tab-size-bigger" id="myTab">
+											<li class="active">
+												<a data-toggle="tab" href="#home">
+													
+													<i class="green icon-home bigger-110"></i>
+													Information
+												</a>
+											</li>
+
+											<li>
+												<a data-toggle="tab" href="#profile">
+												<i class="green icon-user bigger-120"></i>
+													Address
+													<span class="badge badge-important"></span>
+												</a>
+											</li>
+
+										
+											<li>
+												<a data-toggle="tab" href="#Member">
+											<i class="orange icon-male bigger-120"></i>
+													Members 
+													<span class="badge badge-important"></span>
+												</a>
+											</li>
+											
+											
+											<li>
+												<a data-toggle="tab" href="#Provider">
+												<i class="green icon-user-md bigger-120"></i>
+													Providers 
+													<span class="badge badge-important"></span>
+												</a>
+											</li>
+										
+											
+											<li>
+												<a data-toggle="tab" href="#Comments">
+												<i class="orange icon-comment bigger-120"></i>
+													Comments
+													<span class="badge badge-important"></span>
+												</a>
+											</li>
+											
+												
+											<li>
+												<a data-toggle="tab" href="#correspondence">
+												<i class="purple icon-envelope bigger-120"></i>
+													Correspondence
+													<span class="badge badge-important"></span>
+												</a>
+											</li>
+											
+										</ul>
+
+										<div class="tab-content" style="overflow:hidden;" >
+											<!--Information Start-->
+											<div id="home" class="tab-pane in active">
+												
+							<form class="form-horizontal1">	
+
+                                 
+                                							
+								<div class="profile-user-info profile-user-info-striped">
+											
+											
+											<div class="profile-info-row">
+												<div class="profile-info-name"> Name </div>
+
+												<div class="profile-info-value">
+													<span class="editable" id="LastName">UMASS Lowell</span>
+												</div>
+											</div>
+											<div class="profile-info-row">
+												<div class="profile-info-name"> Contact Last Name </div>
+
+												<div class="profile-info-value">
+													<span class="editable" id="LastName">Sharapova</span>
+												</div>
+											</div>
+											
+											<div class="profile-info-row">
+												<div class="profile-info-name"> Contact First Name </div>
+
+												<div class="profile-info-value">
+													<span class="editable" id="LastName">Dan</span>
+												</div>
+											</div>
+											
+											<div class="profile-info-row">
+												<div class="profile-info-name">Contact Middle Suffix </div>
+
+												<div class="profile-info-value">
+													<span class="editable" id="LastName">H</span>
+												</div>
+											</div>
+											
+											
+											
+											
+												<div class="profile-info-row">
+												<div class="profile-info-name"> Phone No </div>
+
+												<div class="profile-info-value">
+													<span class="editable" id="LastName">(888)-999-0000</span>
+												</div>
+											</div>
+									<div class="profile-info-row">
+												<div class="profile-info-name"> Email Address </div>
+
+												<div class="profile-info-value">
+													<span class="editable" id="LastName">bugrara456@gmail.com</span>
+												</div>
+											</div>
+											<div class="profile-info-row">
+												<div class="profile-info-name"> Start date </div>
+
+												<div class="profile-info-value">
+													<span class="editable" id="LastName">01-01-2011</span>
+												</div>
+											</div>
+						            <div class="profile-info-row">
+												<div class="profile-info-name"> TIN </div>
+
+												<div class="profile-info-value">
+													<span class="editable" id="LastName">1111</span>
+												</div>
+											</div>
+
+		
+										</div>
+
+
+		<!--basic scripts-->
+
+		<!--[if !IE]>-->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!--<![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!--page specific plugin scripts-->
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/jquery.gritter.min.js"></script>
+		<script src="assets/js/bootbox.min.js"></script>
+		<script src="assets/js/jquery.slimscroll.min.js"></script>
+		<script src="assets/js/jquery.easy-pie-chart.min.js"></script>
+		<script src="assets/js/jquery.hotkeys.min.js"></script>
+		<script src="assets/js/bootstrap-wysiwyg.min.js"></script>
+		<script src="assets/js/select2.min.js"></script>
+		<script src="assets/js/date-time/bootstrap-datepicker.min.js"></script>
+		<script src="assets/js/fuelux/fuelux.spinner.min.js"></script>
+		<script src="assets/js/x-editable/bootstrap-editable.min.js"></script>
+		<script src="assets/js/x-editable/ace-editable.min.js"></script>
+		<script src="assets/js/jquery.maskedinput.min.js"></script>
+
+		<!--ace scripts-->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!--inline scripts related to this page-->
+
+		<script type="text/javascript">
+			jQuery(function($) {
+			
+				//editables on first profile page
+				$.fn.editable.defaults.mode = 'inline';
+				$.fn.editableform.loading = "<div class='editableform-loading'><i class='light-blue icon-2x icon-spinner icon-spin'></i></div>";
+			    $.fn.editableform.buttons = '<button type="submit" class="btn btn-info editable-submit"><i class="icon-ok icon-white"></i></button>'+
+			                                '<button type="button" class="btn editable-cancel"><i class="icon-remove"></i></button>';    
+				
+				//editables 
+			    $('#LastName').editable({
+					type: 'text',
+					name: 'LastName'
+			    });
+				
+				  $('#FirstName').editable({
+					type: 'text',
+					name: 'FirstName'
+			    });
+				
+				  $('#MiddleName').editable({
+					type: 'text',
+					name: 'MiddleName'
+			    });
+				
+				  $('#SuffixName').editable({
+					type: 'text',
+					name: 'SuffixName'
+			    });
+				
+				
+				 
+			
+			
+				var countries = [];
+			    $.each({ "CA": "Canada", "IN": "India", "NL": "Netherlands", "TR": "Turkey", "US": "United States"}, function(k, v) {
+			        countries.push({id: k, text: v});
+			    });
+			
+				var cities = [];
+				cities["CA"] = [];
+				$.each(["Toronto", "Ottawa", "Calgary", "Vancouver"] , function(k, v){
+					cities["CA"].push({id: v, text: v});
+				});
+				cities["IN"] = [];
+				$.each(["Delhi", "Mumbai", "Bangalore"] , function(k, v){
+					cities["IN"].push({id: v, text: v});
+				});
+				cities["NL"] = [];
+				$.each(["Amsterdam", "Rotterdam", "The Hague"] , function(k, v){
+					cities["NL"].push({id: v, text: v});
+				});
+				cities["TR"] = [];
+				$.each(["Ankara", "Istanbul", "Izmir"] , function(k, v){
+					cities["TR"].push({id: v, text: v});
+				});
+				cities["US"] = [];
+				$.each(["New York", "Miami", "Los Angeles", "Chicago", "Wysconsin"] , function(k, v){
+					cities["US"].push({id: v, text: v});
+				});
+				
+				var currentValue = "NL";
+			    $('#country').editable({
+					type: 'select2',
+					value : 'NL',
+			        source: countries,
+					success: function(response, newValue) {
+						if(currentValue == newValue) return;
+						currentValue = newValue;
+						
+						var new_source = (!newValue || newValue == "") ? [] : cities[newValue];
+						
+						//the destroy method is causing errors in x-editable v1.4.6
+						//it worked fine in v1.4.5
+						/**			
+						$('#city').editable('destroy').editable({
+							type: 'select2',
+							source: new_source
+						}).editable('setValue', null);
+						*/
+						
+						//so we remove it altogether and create a new element
+						var city = $('#city').removeAttr('id').get(0);
+						$(city).clone().attr('id', 'city').text('Select City').editable({
+							type: 'select2',
+							value : null,
+							source: new_source
+						}).insertAfter(city);//insert it after previous instance
+						$(city).remove();//remove previous instance
+						
+					}
+			    });
+			
+				$('#city').editable({
+					type: 'select2',
+					value : 'Amsterdam',
+			        source: cities[currentValue]
+			    });
+			
+			
+			
+				$('#signup').editable({
+					type: 'date',
+					format: 'yyyy-mm-dd',
+					viewformat: 'dd/mm/yyyy',
+					datepicker: {
+						weekStart: 1
+					}
+				});
+			
+			    $('#age').editable({
+			        type: 'spinner',
+					name : 'age',
+					spinner : {
+						min : 16, max:99, step:1
+					}
+				});
+				
+				//var $range = document.createElement("INPUT");
+				//$range.type = 'range';
+			    $('#login').editable({
+			        type: 'slider',//$range.type == 'range' ? 'range' : 'slider',
+					name : 'login',
+					slider : {
+						min : 1, max:50, width:100
+					},
+					success: function(response, newValue) {
+						if(parseInt(newValue) == 1)
+							$(this).html(newValue + " hour ago");
+						else $(this).html(newValue + " hours ago");
+					}
+				});
+			
+				$('#about').editable({
+					mode: 'inline',
+			        type: 'wysiwyg',
+					name : 'about',
+					wysiwyg : {
+						//css : {'max-width':'300px'}
+					},
+					success: function(response, newValue) {
+					}
+				});
+				
+				
+				
+				// *** editable avatar *** //
+				try {//ie8 throws some harmless exception, so let's catch it
+			
+					//it seems that editable plugin calls appendChild, and as Image doesn't have it, it causes errors on IE at unpredicted points
+					//so let's have a fake appendChild for it!
+					if( /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase()) ) Image.prototype.appendChild = function(el){}
+			
+					var last_gritter
+					$('#avatar').editable({
+						type: 'image',
+						name: 'avatar',
+						value: null,
+						image: {
+							//specify ace file input plugin's options here
+							btn_choose: 'Change Avatar',
+							droppable: true,
+							/**
+							//this will override the default before_change that only accepts image files
+							before_change: function(files, dropped) {
+								return true;
+							},
+							*/
+			
+							//and a few extra ones here
+							name: 'avatar',//put the field name here as well, will be used inside the custom plugin
+							max_size: 110000,//~100Kb
+							on_error : function(code) {//on_error function will be called when the selected file has a problem
+								if(last_gritter) $.gritter.remove(last_gritter);
+								if(code == 1) {//file format error
+									last_gritter = $.gritter.add({
+										title: 'File is not an image!',
+										text: 'Please choose a jpg|gif|png image!',
+										class_name: 'gritter-error gritter-center'
+									});
+								} else if(code == 2) {//file size rror
+									last_gritter = $.gritter.add({
+										title: 'File too big!',
+										text: 'Image size should not exceed 100Kb!',
+										class_name: 'gritter-error gritter-center'
+									});
+								}
+								else {//other error
+								}
+							},
+							on_success : function() {
+								$.gritter.removeAll();
+							}
+						},
+					    url: function(params) {
+							// ***UPDATE AVATAR HERE*** //
+							//You can replace the contents of this function with examples/profile-avatar-update.js for actual upload
+			
+			
+							var deferred = new $.Deferred
+			
+							//if value is empty, means no valid files were selected
+							//but it may still be submitted by the plugin, because "" (empty string) is different from previous non-empty value whatever it was
+							//so we return just here to prevent problems
+							var value = $('#avatar').next().find('input[type=hidden]:eq(0)').val();
+							if(!value || value.length == 0) {
+								deferred.resolve();
+								return deferred.promise();
+							}
+			
+			
+							//dummy upload
+							setTimeout(function(){
+								if("FileReader" in window) {
+									//for browsers that have a thumbnail of selected image
+									var thumb = $('#avatar').next().find('img').data('thumb');
+									if(thumb) $('#avatar').get(0).src = thumb;
+								}
+								
+								deferred.resolve({'status':'OK'});
+			
+								if(last_gritter) $.gritter.remove(last_gritter);
+								last_gritter = $.gritter.add({
+									title: 'Avatar Updated!',
+									text: 'Uploading to server can be easily implemented. A working example is included with the template.',
+									class_name: 'gritter-info gritter-center'
+								});
+								
+							 } , parseInt(Math.random() * 800 + 800))
+			
+							return deferred.promise();
+						},
+						
+						success: function(response, newValue) {
+						}
+					})
+				}catch(e) {}
+				
+				
+			
+				//another option is using modals
+				$('#avatar2').on('click', function(){
+					var modal = 
+					'<div class="modal hide fade">\
+						<div class="modal-header">\
+							<button type="button" class="close" data-dismiss="modal">&times;</button>\
+							<h4 class="blue">Change Avatar</h4>\
+						</div>\
+						\
+						<form class="no-margin">\
+						<div class="modal-body">\
+							<div class="space-4"></div>\
+							<div style="width:75%;margin-left:12%;"><input type="file" name="file-input" /></div>\
+						</div>\
+						\
+						<div class="modal-footer center">\
+							<button type="submit" class="btn btn-small btn-success"><i class="icon-ok"></i> Submit</button>\
+							<button type="button" class="btn btn-small" data-dismiss="modal"><i class="icon-remove"></i> Cancel</button>\
+						</div>\
+						</form>\
+					</div>';
+					
+					
+					var modal = $(modal);
+					modal.modal("show").on("hidden", function(){
+						modal.remove();
+					});
+			
+					var working = false;
+			
+					var form = modal.find('form:eq(0)');
+					var file = form.find('input[type=file]').eq(0);
+					file.ace_file_input({
+						style:'well',
+						btn_choose:'Click to choose new avatar',
+						btn_change:null,
+						no_icon:'icon-picture',
+						thumbnail:'small',
+						before_remove: function() {
+							//don't remove/reset files while being uploaded
+							return !working;
+						},
+						before_change: function(files, dropped) {
+							var file = files[0];
+							if(typeof file === "string") {
+								//file is just a file name here (in browsers that don't support FileReader API)
+								if(! (/\.(jpe?g|png|gif)$/i).test(file) ) return false;
+							}
+							else {//file is a File object
+								var type = $.trim(file.type);
+								if( ( type.length > 0 && ! (/^image\/(jpe?g|png|gif)$/i).test(type) )
+										|| ( type.length == 0 && ! (/\.(jpe?g|png|gif)$/i).test(file.name) )//for android default browser!
+									) return false;
+			
+								if( file.size > 110000 ) {//~100Kb
+									return false;
+								}
+							}
+			
+							return true;
+						}
+					});
+			
+					form.on('submit', function(){
+						if(!file.data('ace_input_files')) return false;
+						
+						file.ace_file_input('disable');
+						form.find('button').attr('disabled', 'disabled');
+						form.find('.modal-body').append("<div class='center'><i class='icon-spinner icon-spin bigger-150 orange'></i></div>");
+						
+						var deferred = new $.Deferred;
+						working = true;
+						deferred.done(function() {
+							form.find('button').removeAttr('disabled');
+							form.find('input[type=file]').ace_file_input('enable');
+							form.find('.modal-body > :last-child').remove();
+							
+							modal.modal("hide");
+			
+							var thumb = file.next().find('img').data('thumb');
+							if(thumb) $('#avatar2').get(0).src = thumb;
+			
+							working = false;
+						});
+						
+						
+						setTimeout(function(){
+							deferred.resolve();
+						} , parseInt(Math.random() * 800 + 800));
+			
+						return false;
+					});
+							
+				});
+			
+				
+			
+				//////////////////////////////
+				$('#profile-feed-1').slimScroll({
+				height: '250px',
+				alwaysVisible : true
+				});
+			
+				$('.profile-social-links > a').tooltip();
+			
+				$('.easy-pie-chart.percentage').each(function(){
+				var barColor = $(this).data('color') || '#555';
+				var trackColor = '#E2E2E2';
+				var size = parseInt($(this).data('size')) || 72;
+				$(this).easyPieChart({
+					barColor: barColor,
+					trackColor: trackColor,
+					scaleColor: false,
+					lineCap: 'butt',
+					lineWidth: parseInt(size/10),
+					animate:false,
+					size: size
+				}).css('color', barColor);
+				});
+			  
+				///////////////////////////////////////////
+		
+			
+				
+			
+			
+		
+			});
+		</script>
+		
+                          </form>
+						</div>
+					<!--Address Start-->				
+						
+						<div id="profile" class="tab-pane">
+																	
+								
+					
+					<!--div class="row-fluid"-->
+						
+							<!--PAGE CONTENT BEGINS-->
+
+							<table id="grid-table1"></table>
+
+							<div id="grid-pager1"></div>
+
+							<script type="text/javascript">
+								var $path_base = "/";//this will be used in gritter Notifications containing images
+							</script>
+
+						
+		<!--Script for the jtable -->
+		
+			
+		
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+		
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!--page specific plugin scripts-->
+
+		<script src="assets/js/date-time/bootstrap-datepicker.min.js"></script>
+		<script src="assets/js/jqGrid/jquery.jqGrid.min.js"></script>
+		<script src="assets/js/jqGrid/i18n/grid.locale-en.js"></script>
+
+		<!--ace scripts-->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+
+		<!--inline scripts related to this page-->
+		
+		<script type="text/javascript">
+			var grid_data10 = 
+			[ 
+				{Adf:"75 St Alphonsus Street",Ads:"Apt#607",City:"Boston",State:"MA",Zip:"02120",Country:"US", Status:"Active"},
+				
+				
+			];	
+			
+			jQuery(function($) {
+				var grid_selector = "#grid-table1";
+				var pager_selector = "#grid-pager1";
+			
+				jQuery(grid_selector).jqGrid({
+					//direction: "rtl",
+					
+					data: grid_data10,
+					datatype: "local",
+					height: 150,
+					width: 1004,
+					
+					colNames:['Address Line 1','Address line 2','City', 'State', 'Zip','Country','Status'],
+					colModel:[
+						
+						{name:'Adf',index:'Adf', width:300,editable: true,editoptions:{size:"20",maxlength:"30"}},
+						{name:'Ads',index:'Ads', width:200,editable: true,editoptions:{size:"20",maxlength:"30"}},
+						{name:'City',index:'City', width:200,editable: true,editoptions:{size:"20",maxlength:"30"}},
+						{name:'State',index:'State', width:200,editable: true,editoptions:{size:"20",maxlength:"30"}},
+						{name:'Zip',index:'Zip', width:200,editable: true,editoptions:{size:"20",maxlength:"30"}},
+						{name:'Country',index:'Country', width:200,editable: true,editoptions:{size:"20",maxlength:"30"}},
+                        {name:'Status',index:'Status', width:200,editable: true,editoptions:{size:"20",maxlength:"30"}},
+
+						
+					], 
+			
+					viewrecords : true,
+					rowNum:10,
+					rowList:[10,20,30],
+					pager : pager_selector,
+					altRows: true,
+					//toppager: true,
+					
+					multiselect: true,
+					//multikey: "ctrlKey",
+			        multiboxonly: true,
+			
+					loadComplete : function() {
+						var table = this;
+						setTimeout(function(){
+							styleCheckbox(table);
+							
+							updateActionIcons(table);
+							updatePagerIcons(table);
+							enableTooltips(table);
+						}, 0);
+					},
+			
+					editurl: $path_base+"/dummy.html",//nothing is saved
+					//caption: "Address"
+			
+				});
+			
+				//enable search/filter toolbar
+				//jQuery(grid_selector).jqGrid('filterToolbar',{defaultSearch:true,stringResult:true})
+			
+				//switch element when editing inline
+				function aceSwitch( cellvalue, options, cell ) {
+					setTimeout(function(){
+						$(cell) .find('input[type=checkbox]')
+								.wrap('<label class="inline" />')
+							.addClass('ace ace-switch ace-switch-5')
+							.after('<span class="lbl"></span>');
+					}, 0);
+				}
+				//enable datepicker
+				function pickDate( cellvalue, options, cell ) {
+					setTimeout(function(){
+						$(cell) .find('input[type=text]')
+								.datepicker({format:'yyyy-mm-dd' , autoclose:true}); 
+					}, 0);
+				}
+			
+			
+				//navButtons
+				jQuery(grid_selector).jqGrid('navGrid',pager_selector,
+					{ 	//navbar options
+						edit: true,
+						editicon : 'icon-pencil blue',
+						add: true,
+						addicon : 'icon-plus-sign purple',
+						del: true,
+						delicon : 'icon-trash red',
+						search: true,
+						searchicon : 'icon-search orange',
+						refresh: true,
+						refreshicon : 'icon-refresh green',
+						view: true,
+						viewicon : 'icon-zoom-in grey',
+					},
+					{
+						//edit record form
+						//closeAfterEdit: true,
+						recreateForm: true,
+						beforeShowForm : function(e) {
+							var form = $(e[0]);
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+							style_edit_form(form);
+						}
+					},
+					{
+						//new record form
+						closeAfterAdd: true,
+						recreateForm: true,
+						viewPagerButtons: false,
+						beforeShowForm : function(e) {
+							var form = $(e[0]);
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+							style_edit_form(form);
+						}
+					},
+					{
+						//delete record form
+						recreateForm: true,
+						beforeShowForm : function(e) {
+							var form = $(e[0]);
+							if(form.data('styled')) return false;
+							
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+							style_delete_form(form);
+							
+							form.data('styled', true);
+						},
+						onClick : function(e) {
+							Notification(1);
+						}
+					},
+					{
+						//search form
+						recreateForm: true,
+						afterShowSearch: function(e){
+							var form = $(e[0]);
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-title').wrap('<div class="widget-header" />')
+							style_search_form(form);
+						},
+						afterRedraw: function(){
+							style_search_filters($(this));
+						}
+						,
+						multipleSearch: true,
+						/**
+						multipleGroup:true,
+						showQuery: true
+						*/
+					},
+					{
+						//view record form
+						recreateForm: true,
+						beforeShowForm: function(e){
+							var form = $(e[0]);
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-title').wrap('<div class="widget-header" />')
+						}
+					}
+				)
+			
+			
+				
+				function style_edit_form(form) {
+					//enable datepicker on "sdate" field and switches for "stock" field
+					form.find('input[name=sdate]').datepicker({format:'yyyy-mm-dd' , autoclose:true})
+						.end().find('input[name=stock]')
+							  .addClass('ace ace-switch ace-switch-5').wrap('<label class="inline" />').after('<span class="lbl"></span>');
+			
+					//update buttons classes
+					var buttons = form.next().find('.EditButton .fm-button');
+					buttons.addClass('btn btn-small').find('[class*="-icon"]').remove();//ui-icon, s-icon
+					buttons.eq(0).addClass('btn-primary').prepend('<i class="icon-ok"></i>');
+					buttons.eq(1).prepend('<i class="icon-remove"></i>')
+					
+					buttons = form.next().find('.navButton a');
+					buttons.find('.ui-icon').remove();
+					buttons.eq(0).append('<i class="icon-chevron-left"></i>');
+					buttons.eq(1).append('<i class="icon-chevron-right"></i>');		
+				}
+			
+				function style_delete_form(form) {
+					var buttons = form.next().find('.EditButton .fm-button');
+					buttons.addClass('btn btn-small').find('[class*="-icon"]').remove();//ui-icon, s-icon
+					buttons.eq(0).addClass('btn-danger').prepend('<i class="icon-trash"></i>');
+					buttons.eq(1).prepend('<i class="icon-remove"></i>')
+				}
+				
+				function style_search_filters(form) {
+					form.find('.delete-rule').val('X');
+					form.find('.add-rule').addClass('btn btn-small btn-primary');
+					form.find('.add-group').addClass('btn btn-small btn-success');
+					form.find('.delete-group').addClass('btn btn-small btn-danger');
+				}
+				function style_search_form(form) {
+					var dialog = form.closest('.ui-jqdialog');
+					var buttons = dialog.find('.EditTable')
+					buttons.find('.EditButton a[id*="_reset"]').addClass('btn btn-small btn-info').find('.ui-icon').attr('class', 'icon-retweet');
+					buttons.find('.EditButton a[id*="_query"]').addClass('btn btn-small btn-inverse').find('.ui-icon').attr('class', 'icon-comment-alt');
+					buttons.find('.EditButton a[id*="_search"]').addClass('btn btn-small btn-purple').find('.ui-icon').attr('class', 'icon-search');
+				}
+				
+				function beforeDeleteCallback(e) {
+					var form = $(e[0]);
+					if(form.data('styled')) return false;
+					
+					form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+					style_delete_form(form);
+					
+					form.data('styled', true);
+				}
+				
+				function beforeEditCallback(e) {
+					var form = $(e[0]);
+					form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+					style_edit_form(form);
+				}
+			
+			
+			
+				//it causes some flicker when reloading or navigating grid
+				//it may be possible to have some custom formatter to do this as the grid is being created to prevent this
+				//or go back to default browser checkbox styles for the grid
+				function styleCheckbox(table) {
+				/**
+					$(table).find('input:checkbox').addClass('ace')
+					.wrap('<label />')
+					.after('<span class="lbl align-top" />')
+			
+			
+					$('.ui-jqgrid-labels th[id*="_cb"]:first-child')
+					.find('input.cbox[type=checkbox]').addClass('ace')
+					.wrap('<label />').after('<span class="lbl align-top" />');
+				*/
+				}
+				
+			
+				//unlike navButtons icons, action icons in rows seem to be hard-coded
+				//you can change them like this in here if you want
+				function updateActionIcons(table) {
+					/**
+					var replacement = 
+					{
+						'ui-icon-pencil' : 'icon-pencil blue',
+						'ui-icon-trash' : 'icon-trash red',
+						'ui-icon-disk' : 'icon-ok green',
+						'ui-icon-cancel' : 'icon-remove red'
+					};
+					$(table).find('.ui-pg-div span.ui-icon').each(function(){
+						var icon = $(this);
+						var $class = $.trim(icon.attr('class').replace('ui-icon', ''));
+						if($class in replacement) icon.attr('class', 'ui-icon '+replacement[$class]);
+					})
+					*/
+				}
+				
+				//replace icons with FontAwesome icons like above
+				function updatePagerIcons(table) {
+					var replacement = 
+					{
+						'ui-icon-seek-first' : 'icon-double-angle-left bigger-140',
+						'ui-icon-seek-prev' : 'icon-angle-left bigger-140',
+						'ui-icon-seek-next' : 'icon-angle-right bigger-140',
+						'ui-icon-seek-end' : 'icon-double-angle-right bigger-140'
+					};
+					$('.ui-pg-table:not(.navtable) > tbody > tr > .ui-pg-button > .ui-icon').each(function(){
+						var icon = $(this);
+						var $class = $.trim(icon.attr('class').replace('ui-icon', ''));
+						
+						if($class in replacement) icon.attr('class', 'ui-icon '+replacement[$class]);
+					})
+				}
+			
+				function enableTooltips(table) {
+					$('.navtable .ui-pg-button').tooltip({container:'body'});
+					$(table).find('.ui-pg-div').tooltip({container:'body'});
+				}
+			
+				//var selr = jQuery(grid_selector).jqGrid('getGridParam','selrow');
+			
+			
+			});
+		</script>
+		
+                          
+						</div>
+						
+						<!--Address End -->
+			
+						
+						
+						
+						
+						<!--Member Start-->
+						
+						
+						<div id="Member" class="tab-pane">
+																	
+							<form class="form-horizontal">		
+					
+					<!--div class="row-fluid"-->
+						
+							<!--PAGE CONTENT BEGINS-->
+
+							<table id="grid-table100"></table>
+
+							<div id="grid-pager100"></div>
+
+							<script type="text/javascript">
+								var $path_base = "/";//this will be used in gritter Notifications containing images
+							</script>
+
+						
+		<!--Script for the jtable -->
+		
+			
+		
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+		
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!--page specific plugin scripts-->
+
+		<script src="assets/js/date-time/bootstrap-datepicker.min.js"></script>
+		<script src="assets/js/jqGrid/jquery.jqGrid.min.js"></script>
+		<script src="assets/js/jqGrid/i18n/grid.locale-en.js"></script>
+
+		<!--ace scripts-->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+
+		<!--inline scripts related to this page-->
+		
+		<script type="text/javascript">
+			var grid_data100 = 
+			[ 
+				{id:"Pol Styne",name:"50",note:"05-05-2013",stock:"$2000",ship:"$5000", sdate:"Dr Sunny Mat",nt:""},
+				{id:"Chery Kedia",name:"60",note:"06-06-2013",stock:"$3000",ship:"$6000",sdate:"Dr. Bob PK",nt:""},
+				
+			];	
+			
+			jQuery(function($) {
+				var grid_selector = "#grid-table100";
+				var pager_selector = "#grid-pager100";
+			
+				jQuery(grid_selector).jqGrid({
+					//direction: "rtl",
+					
+					data: grid_data100,
+					datatype: "local",
+					height: 150,
+					width: 1004,
+					
+					colNames:[ 'Members Name','PCP','Health Risk%',  'Current Cost','Trending Cost','Last Visit Date','Notes'],
+					colModel:[
+						
+						
+						{name:'id',formatter:'showlink', formatoptions:{baseLinkUrl:'View-Member.html'},index:'id', width:230, sorttype:"int", editable: true},
+						{name:'sdate',index:'sdate',width:230, editable:true, sorttype:"date",unformat: pickDate},
+						{name:'name',index:'name', width:200,editable: true,editoptions:{size:"20",maxlength:"30"}},
+						{name:'stock',index:'stock', width:170, editable: true,edittype:"checkbox",editoptions: {value:"Yes:No"},unformat: aceSwitch},
+						{name:'ship',index:'ship', width:200, editable: true,edittype:"select",editoptions:{value:"FE:FedEx;IN:InTime;TN:TNT;AR:ARAMEX"}},
+						{name:'note',index:'note', width:200, sortable:false,editable: true,edittype:"textarea", editoptions:{rows:"2",cols:"10"}},
+						{name:'nt',index:'nt',width:200, editable:true, sorttype:"date",unformat: pickDate},
+					], 
+			
+					viewrecords : true,
+					rowNum:10,
+					rowList:[10,20,30],
+					pager : pager_selector,
+					altRows: true,
+					//toppager: true,
+					
+					multiselect: true,
+					//multikey: "ctrlKey",
+			        multiboxonly: true,
+			
+					loadComplete : function() {
+						var table = this;
+						setTimeout(function(){
+							styleCheckbox(table);
+							
+							updateActionIcons(table);
+							updatePagerIcons(table);
+							enableTooltips(table);
+						}, 0);
+					},
+			
+					editurl: $path_base+"/dummy.html",//nothing is saved
+					
+			
+				});
+			
+				//enable search/filter toolbar
+				//jQuery(grid_selector).jqGrid('filterToolbar',{defaultSearch:true,stringResult:true})
+			
+				//switch element when editing inline
+				function aceSwitch( cellvalue, options, cell ) {
+					setTimeout(function(){
+						$(cell) .find('input[type=checkbox]')
+								.wrap('<label class="inline" />')
+							.addClass('ace ace-switch ace-switch-5')
+							.after('<span class="lbl"></span>');
+					}, 0);
+				}
+				//enable datepicker
+				function pickDate( cellvalue, options, cell ) {
+					setTimeout(function(){
+						$(cell) .find('input[type=text]')
+								.datepicker({format:'yyyy-mm-dd' , autoclose:true}); 
+					}, 0);
+				}
+			
+			
+				//navButtons
+				jQuery(grid_selector).jqGrid('navGrid',pager_selector,
+					{ 	//navbar options
+						edit: true,
+						editicon : 'icon-pencil blue',
+						add: true,
+						addicon : 'icon-plus-sign purple',
+						del: true,
+						delicon : 'icon-trash red',
+						search: true,
+						searchicon : 'icon-search orange',
+						refresh: true,
+						refreshicon : 'icon-refresh green',
+						view: true,
+						viewicon : 'icon-zoom-in grey',
+					},
+					{
+						//edit record form
+						//closeAfterEdit: true,
+						recreateForm: true,
+						beforeShowForm : function(e) {
+							var form = $(e[0]);
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+							style_edit_form(form);
+						}
+					},
+					{
+						//new record form
+						closeAfterAdd: true,
+						recreateForm: true,
+						viewPagerButtons: false,
+						beforeShowForm : function(e) {
+							var form = $(e[0]);
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+							style_edit_form(form);
+						}
+					},
+					{
+						//delete record form
+						recreateForm: true,
+						beforeShowForm : function(e) {
+							var form = $(e[0]);
+							if(form.data('styled')) return false;
+							
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+							style_delete_form(form);
+							
+							form.data('styled', true);
+						},
+						onClick : function(e) {
+							Notification(1);
+						}
+					},
+					{
+						//search form
+						recreateForm: true,
+						afterShowSearch: function(e){
+							var form = $(e[0]);
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-title').wrap('<div class="widget-header" />')
+							style_search_form(form);
+						},
+						afterRedraw: function(){
+							style_search_filters($(this));
+						}
+						,
+						multipleSearch: true,
+						/**
+						multipleGroup:true,
+						showQuery: true
+						*/
+					},
+					{
+						//view record form
+						
+						 
+						recreateForm: true,
+						beforeShowForm: function(e){
+							var form = $(e[0]);
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-title').wrap('<div class="widget-header" />')
+						}
+					}
+				)
+			
+			
+				
+				function style_edit_form(form) {
+					//enable datepicker on "sdate" field and switches for "stock" field
+					form.find('input[name=sdate]').datepicker({format:'yyyy-mm-dd' , autoclose:true})
+						.end().find('input[name=stock]')
+							  .addClass('ace ace-switch ace-switch-5').wrap('<label class="inline" />').after('<span class="lbl"></span>');
+			
+					//update buttons classes
+					var buttons = form.next().find('.EditButton .fm-button');
+					buttons.addClass('btn btn-small').find('[class*="-icon"]').remove();//ui-icon, s-icon
+					buttons.eq(0).addClass('btn-primary').prepend('<i class="icon-ok"></i>');
+					buttons.eq(1).prepend('<i class="icon-remove"></i>')
+					
+					buttons = form.next().find('.navButton a');
+					buttons.find('.ui-icon').remove();
+					buttons.eq(0).append('<i class="icon-chevron-left"></i>');
+					buttons.eq(1).append('<i class="icon-chevron-right"></i>');		
+				}
+			
+				function style_delete_form(form) {
+					var buttons = form.next().find('.EditButton .fm-button');
+					buttons.addClass('btn btn-small').find('[class*="-icon"]').remove();//ui-icon, s-icon
+					buttons.eq(0).addClass('btn-danger').prepend('<i class="icon-trash"></i>');
+					buttons.eq(1).prepend('<i class="icon-remove"></i>')
+				}
+				
+				function style_search_filters(form) {
+					form.find('.delete-rule').val('X');
+					form.find('.add-rule').addClass('btn btn-small btn-primary');
+					form.find('.add-group').addClass('btn btn-small btn-success');
+					form.find('.delete-group').addClass('btn btn-small btn-danger');
+				}
+				function style_search_form(form) {
+					var dialog = form.closest('.ui-jqdialog');
+					var buttons = dialog.find('.EditTable')
+					buttons.find('.EditButton a[id*="_reset"]').addClass('btn btn-small btn-info').find('.ui-icon').attr('class', 'icon-retweet');
+					buttons.find('.EditButton a[id*="_query"]').addClass('btn btn-small btn-inverse').find('.ui-icon').attr('class', 'icon-comment-alt');
+					buttons.find('.EditButton a[id*="_search"]').addClass('btn btn-small btn-purple').find('.ui-icon').attr('class', 'icon-search');
+				}
+				
+				function beforeDeleteCallback(e) {
+					var form = $(e[0]);
+					if(form.data('styled')) return false;
+					
+					form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+					style_delete_form(form);
+					
+					form.data('styled', true);
+				}
+				
+				function beforeEditCallback(e) {
+					var form = $(e[0]);
+					form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+					style_edit_form(form);
+				}
+			
+			
+			
+				//it causes some flicker when reloading or navigating grid
+				//it may be possible to have some custom formatter to do this as the grid is being created to prevent this
+				//or go back to default browser checkbox styles for the grid
+				function styleCheckbox(table) {
+				/**
+					$(table).find('input:checkbox').addClass('ace')
+					.wrap('<label />')
+					.after('<span class="lbl align-top" />')
+			
+			
+					$('.ui-jqgrid-labels th[id*="_cb"]:first-child')
+					.find('input.cbox[type=checkbox]').addClass('ace')
+					.wrap('<label />').after('<span class="lbl align-top" />');
+				*/
+				}
+				
+			
+				//unlike navButtons icons, action icons in rows seem to be hard-coded
+				//you can change them like this in here if you want
+				function updateActionIcons(table) {
+					/**
+					var replacement = 
+					{
+						'ui-icon-pencil' : 'icon-pencil blue',
+						'ui-icon-trash' : 'icon-trash red',
+						'ui-icon-disk' : 'icon-ok green',
+						'ui-icon-cancel' : 'icon-remove red'
+					};
+					$(table).find('.ui-pg-div span.ui-icon').each(function(){
+						var icon = $(this);
+						var $class = $.trim(icon.attr('class').replace('ui-icon', ''));
+						if($class in replacement) icon.attr('class', 'ui-icon '+replacement[$class]);
+					})
+					*/
+				}
+				
+				//replace icons with FontAwesome icons like above
+				function updatePagerIcons(table) {
+					var replacement = 
+					{
+						'ui-icon-seek-first' : 'icon-double-angle-left bigger-140',
+						'ui-icon-seek-prev' : 'icon-angle-left bigger-140',
+						'ui-icon-seek-next' : 'icon-angle-right bigger-140',
+						'ui-icon-seek-end' : 'icon-double-angle-right bigger-140'
+					};
+					$('.ui-pg-table:not(.navtable) > tbody > tr > .ui-pg-button > .ui-icon').each(function(){
+						var icon = $(this);
+						var $class = $.trim(icon.attr('class').replace('ui-icon', ''));
+						
+						if($class in replacement) icon.attr('class', 'ui-icon '+replacement[$class]);
+					})
+				}
+			
+				function enableTooltips(table) {
+					$('.navtable .ui-pg-button').tooltip({container:'body'});
+					$(table).find('.ui-pg-div').tooltip({container:'body'});
+				}
+			
+				//var selr = jQuery(grid_selector).jqGrid('getGridParam','selrow');
+			
+			
+			});
+		</script>
+		          </form>
+                          
+						</div>
+						
+						
+						<!--Member End-->
+						
+						<!--Provider Start-->
+						
+						<div id="Provider" class="tab-pane">
+																	
+							<form class="form-horizontal2">		
+					
+					<!--div class="row-fluid"-->
+						
+							<!--PAGE CONTENT BEGINS-->
+
+							<table id="grid-table20"></table>
+
+							<div id="grid-pager20"></div>
+
+							<script type="text/javascript">
+								var $path_base = "/";//this will be used in gritter Notifications containing images
+							</script>
+
+						
+		<!--Script for the jtable -->
+		
+			
+		
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+		
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!--page specific plugin scripts-->
+
+		<script src="assets/js/date-time/bootstrap-datepicker.min.js"></script>
+		<script src="assets/js/jqGrid/jquery.jqGrid.min.js"></script>
+		<script src="assets/js/jqGrid/i18n/grid.locale-en.js"></script>
+
+		<!--ace scripts-->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+
+		<!--inline scripts related to this page-->
+		
+		<script type="text/javascript">
+			var grid_data20 = 
+			[ 
+				{id:"Dr.Dev Murti",name:"500",note:"$4000",stock:"11",ship:"$1000", sdate:"Dermatology"},
+				{id:"Dr. Dan Rise",name:"600",note:"$5000",stock:"13",ship:"$1500",sdate:"Neurology"},
+				
+			];	
+			
+			jQuery(function($) {
+				var grid_selector = "#grid-table20";
+				var pager_selector = "#grid-pager20";
+			
+				jQuery(grid_selector).jqGrid({
+					//direction: "rtl",
+					
+					data: grid_data20,
+					datatype: "local",
+					height: 150,
+					width: 990,
+					
+					colNames:[ 'Providers','Specaility','Quality Score', 'Total Visits', 'Current Cost','Trending Cost'],
+					colModel:[
+						
+						{name:'id',formatter:'showlink', formatoptions:{baseLinkUrl:'View-Provider.html'},index:'id', width:200, sorttype:"int", editable: true},
+						{name:'sdate',index:'sdate',width:200, editable:true, sorttype:"date",unformat: pickDate},
+						{name:'name',index:'name', width:200,editable: true,editoptions:{size:"20",maxlength:"30"}},
+						{name:'stock',index:'stock', width:170, editable: true,edittype:"checkbox",editoptions: {value:"Yes:No"},unformat: aceSwitch},
+						{name:'ship',index:'ship', width:150, editable: true,edittype:"select",editoptions:{value:"FE:FedEx;IN:InTime;TN:TNT;AR:ARAMEX"}},
+						{name:'note',index:'note', width:150, sortable:false,editable: true,edittype:"textarea", editoptions:{rows:"2",cols:"10"}} 
+					], 
+			
+					viewrecords : true,
+					rowNum:10,
+					rowList:[10,20,30],
+					pager : pager_selector,
+					altRows: true,
+					//toppager: true,
+					
+					multiselect: true,
+					//multikey: "ctrlKey",
+			        multiboxonly: true,
+			
+					loadComplete : function() {
+						var table = this;
+						setTimeout(function(){
+							styleCheckbox(table);
+							
+							updateActionIcons(table);
+							updatePagerIcons(table);
+							enableTooltips(table);
+						}, 0);
+					},
+			
+					editurl: $path_base+"/dummy.html",//nothing is saved
+			
+			
+				});
+			
+				//enable search/filter toolbar
+				//jQuery(grid_selector).jqGrid('filterToolbar',{defaultSearch:true,stringResult:true})
+			
+				//switch element when editing inline
+				function aceSwitch( cellvalue, options, cell ) {
+					setTimeout(function(){
+						$(cell) .find('input[type=checkbox]')
+								.wrap('<label class="inline" />')
+							.addClass('ace ace-switch ace-switch-5')
+							.after('<span class="lbl"></span>');
+					}, 0);
+				}
+				//enable datepicker
+				function pickDate( cellvalue, options, cell ) {
+					setTimeout(function(){
+						$(cell) .find('input[type=text]')
+								.datepicker({format:'yyyy-mm-dd' , autoclose:true}); 
+					}, 0);
+				}
+			
+			
+				//navButtons
+				jQuery(grid_selector).jqGrid('navGrid',pager_selector,
+					{ 	//navbar options
+						edit: true,
+						editicon : 'icon-pencil blue',
+						add: true,
+						addicon : 'icon-plus-sign purple',
+						del: true,
+						delicon : 'icon-trash red',
+						search: true,
+						searchicon : 'icon-search orange',
+						refresh: true,
+						refreshicon : 'icon-refresh green',
+						view: true,
+						viewicon : 'icon-zoom-in grey',
+					},
+					{
+						//edit record form
+						//closeAfterEdit: true,
+						recreateForm: true,
+						beforeShowForm : function(e) {
+							var form = $(e[0]);
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+							style_edit_form(form);
+						}
+					},
+					{
+						//new record form
+						closeAfterAdd: true,
+						recreateForm: true,
+						viewPagerButtons: false,
+						beforeShowForm : function(e) {
+							var form = $(e[0]);
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+							style_edit_form(form);
+						}
+					},
+					{
+						//delete record form
+						recreateForm: true,
+						beforeShowForm : function(e) {
+							var form = $(e[0]);
+							if(form.data('styled')) return false;
+							
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+							style_delete_form(form);
+							
+							form.data('styled', true);
+						},
+						onClick : function(e) {
+							Notification(1);
+						}
+					},
+					{
+						//search form
+						recreateForm: true,
+						afterShowSearch: function(e){
+							var form = $(e[0]);
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-title').wrap('<div class="widget-header" />')
+							style_search_form(form);
+						},
+						afterRedraw: function(){
+							style_search_filters($(this));
+						}
+						,
+						multipleSearch: true,
+						/**
+						multipleGroup:true,
+						showQuery: true
+						*/
+					},
+					{
+						//view record form
+						recreateForm: true,
+						beforeShowForm: function(e){
+							var form = $(e[0]);
+							form.closest('.ui-jqdialog').find('.ui-jqdialog-title').wrap('<div class="widget-header" />')
+						}
+					}
+				)
+			
+			
+				
+				function style_edit_form(form) {
+					//enable datepicker on "sdate" field and switches for "stock" field
+					form.find('input[name=sdate]').datepicker({format:'yyyy-mm-dd' , autoclose:true})
+						.end().find('input[name=stock]')
+							  .addClass('ace ace-switch ace-switch-5').wrap('<label class="inline" />').after('<span class="lbl"></span>');
+			
+					//update buttons classes
+					var buttons = form.next().find('.EditButton .fm-button');
+					buttons.addClass('btn btn-small').find('[class*="-icon"]').remove();//ui-icon, s-icon
+					buttons.eq(0).addClass('btn-primary').prepend('<i class="icon-ok"></i>');
+					buttons.eq(1).prepend('<i class="icon-remove"></i>')
+					
+					buttons = form.next().find('.navButton a');
+					buttons.find('.ui-icon').remove();
+					buttons.eq(0).append('<i class="icon-chevron-left"></i>');
+					buttons.eq(1).append('<i class="icon-chevron-right"></i>');		
+				}
+			
+				function style_delete_form(form) {
+					var buttons = form.next().find('.EditButton .fm-button');
+					buttons.addClass('btn btn-small').find('[class*="-icon"]').remove();//ui-icon, s-icon
+					buttons.eq(0).addClass('btn-danger').prepend('<i class="icon-trash"></i>');
+					buttons.eq(1).prepend('<i class="icon-remove"></i>')
+				}
+				
+				function style_search_filters(form) {
+					form.find('.delete-rule').val('X');
+					form.find('.add-rule').addClass('btn btn-small btn-primary');
+					form.find('.add-group').addClass('btn btn-small btn-success');
+					form.find('.delete-group').addClass('btn btn-small btn-danger');
+				}
+				function style_search_form(form) {
+					var dialog = form.closest('.ui-jqdialog');
+					var buttons = dialog.find('.EditTable')
+					buttons.find('.EditButton a[id*="_reset"]').addClass('btn btn-small btn-info').find('.ui-icon').attr('class', 'icon-retweet');
+					buttons.find('.EditButton a[id*="_query"]').addClass('btn btn-small btn-inverse').find('.ui-icon').attr('class', 'icon-comment-alt');
+					buttons.find('.EditButton a[id*="_search"]').addClass('btn btn-small btn-purple').find('.ui-icon').attr('class', 'icon-search');
+				}
+				
+				function beforeDeleteCallback(e) {
+					var form = $(e[0]);
+					if(form.data('styled')) return false;
+					
+					form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+					style_delete_form(form);
+					
+					form.data('styled', true);
+				}
+				
+				function beforeEditCallback(e) {
+					var form = $(e[0]);
+					form.closest('.ui-jqdialog').find('.ui-jqdialog-titlebar').wrapInner('<div class="widget-header" />')
+					style_edit_form(form);
+				}
+			
+			
+			
+				//it causes some flicker when reloading or navigating grid
+				//it may be possible to have some custom formatter to do this as the grid is being created to prevent this
+				//or go back to default browser checkbox styles for the grid
+				function styleCheckbox(table) {
+				/**
+					$(table).find('input:checkbox').addClass('ace')
+					.wrap('<label />')
+					.after('<span class="lbl align-top" />')
+			
+			
+					$('.ui-jqgrid-labels th[id*="_cb"]:first-child')
+					.find('input.cbox[type=checkbox]').addClass('ace')
+					.wrap('<label />').after('<span class="lbl align-top" />');
+				*/
+				}
+				
+			
+				//unlike navButtons icons, action icons in rows seem to be hard-coded
+				//you can change them like this in here if you want
+				function updateActionIcons(table) {
+					/**
+					var replacement = 
+					{
+						'ui-icon-pencil' : 'icon-pencil blue',
+						'ui-icon-trash' : 'icon-trash red',
+						'ui-icon-disk' : 'icon-ok green',
+						'ui-icon-cancel' : 'icon-remove red'
+					};
+					$(table).find('.ui-pg-div span.ui-icon').each(function(){
+						var icon = $(this);
+						var $class = $.trim(icon.attr('class').replace('ui-icon', ''));
+						if($class in replacement) icon.attr('class', 'ui-icon '+replacement[$class]);
+					})
+					*/
+				}
+				
+				//replace icons with FontAwesome icons like above
+				function updatePagerIcons(table) {
+					var replacement = 
+					{
+						'ui-icon-seek-first' : 'icon-double-angle-left bigger-140',
+						'ui-icon-seek-prev' : 'icon-angle-left bigger-140',
+						'ui-icon-seek-next' : 'icon-angle-right bigger-140',
+						'ui-icon-seek-end' : 'icon-double-angle-right bigger-140'
+					};
+					$('.ui-pg-table:not(.navtable) > tbody > tr > .ui-pg-button > .ui-icon').each(function(){
+						var icon = $(this);
+						var $class = $.trim(icon.attr('class').replace('ui-icon', ''));
+						
+						if($class in replacement) icon.attr('class', 'ui-icon '+replacement[$class]);
+					})
+				}
+			
+				function enableTooltips(table) {
+					$('.navtable .ui-pg-button').tooltip({container:'body'});
+					$(table).find('.ui-pg-div').tooltip({container:'body'});
+				}
+			
+				//var selr = jQuery(grid_selector).jqGrid('getGridParam','selrow');
+			
+			
+			});
+		</script>
+		
+                       </form>   
+						</div>
+					
+						
+						<!--Provider End-->
+						
+						<!--Comments Start -->
+			<div id="Comments" class="tab-pane">
+							<div class="widget-body">
+											<div class="widget-main no-padding">
+												<div class="dialogs">
+													<div class="itemdiv dialogdiv">
+														
+
+														<div class="body">
+															<div class="time">
+																<i class="icon-time"></i>
+																<span class="green">Today 4 sec</span>
+															</div>
+
+															<div class="name">
+																<a href="#">Alexa</a>
+															</div>
+															<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis.</div>
+
+															<div class="tools">
+																<a href="#" class="btn btn-minier btn-info">
+																	<i class="icon-only icon-share-alt"></i>
+																</a>
+															</div>
+														</div>
+													</div>
+
+													<div class="itemdiv dialogdiv">
+														
+
+														<div class="body">
+															<div class="time">
+																<i class="icon-time"></i>
+																<span class="blue">Today 38 sec</span>
+															</div>
+
+															<div class="name">
+																<a href="#">John</a>
+															</div>
+															<div class="text">Raw denim you probably haven&#39;t heard of them jean shorts Austin.</div>
+
+															<div class="tools">
+																<a href="#" class="btn btn-minier btn-info">
+																	<i class="icon-only icon-share-alt"></i>
+																</a>
+															</div>
+														</div>
+													</div>
+
+													<div class="itemdiv dialogdiv">
+														
+
+														<div class="body">
+															<div class="time">
+																<i class="icon-time"></i>
+																<span class="orange">12 sep 2013  9:20 am EST</span>
+															</div>
+
+															<div class="name">
+																<a href="#">Bob</a>
+																
+															</div>
+															<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis.</div>
+
+															<div class="tools">
+																<a href="#" class="btn btn-minier btn-info">
+																	<i class="icon-only icon-share-alt"></i>
+																</a>
+															</div>
+														</div>
+													</div>
+
+													<div class="itemdiv dialogdiv">
+														
+														<div class="body">
+															<div class="time">
+																<i class="icon-time"></i>
+																<span class="grey">11 sep 2013  9:20 am EST</span>
+															</div>
+
+															<div class="name">
+																<a href="#">Jim</a>
+															</div>
+															<div class="text">Raw denim you probably haven&#39;t heard of them jean shorts Austin.</div>
+
+															<div class="tools">
+																<a href="#" class="btn btn-minier btn-info">
+																	<i class="icon-only icon-share-alt"></i>
+																</a>
+															</div>
+														</div>
+													</div>
+
+													<div class="itemdiv dialogdiv">
+														
+
+														<div class="body">
+															<div class="time">
+																<i class="icon-time"></i>
+																<span class="green">10 sep 2013  9:20 am EST</span>
+															</div>
+
+															<div class="name">
+																<a href="#">Alexa</a>
+															</div>
+															<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+
+															<div class="tools">
+																<a href="#" class="btn btn-minier btn-info">
+																	<i class="icon-only icon-share-alt"></i>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<form>
+													<div class="form-actions input-append">
+														<input placeholder="Type New Comment ..." type="text" class="width-75" name="message" />
+														<button class="btn btn-small btn-info no-radius" onclick="return false;">
+															<i class="icon-share-alt"></i>
+															<span class="hidden-phone">Add</span>
+														</button>
+													</div>
+												</form>
+											</div><!--/widget-main-->
+										</div><!--/widget-body-->
+						</div>
+					<!--Comment End-->
+						
+						<!-- Correspondence Start -->
+						<div id="correspondence" class="tab-pane">
+						
+							<div class="row-fluid">
+						<div class="span12">
+							<!--PAGE CONTENT BEGINS-->
+
+							<div class="row-fluid">
+								<div class="span12">
+									<div class="tabbable12">
+										<ul id="inbox-tabs" class="inbox-tabs nav nav-tabs padding-16 tab-size-bigger tab-space-1">
+											<li class="li-new-mail pull-right">
+												<a data-toggle="tab" href="#write" data-target="write" class="btn-new-mail">
+													<span class="btn bt1n-small btn-purple no-border">
+														<i class=" icon-envelope bigger-130"></i>
+														<span class="bigger-110">Write Mail</span>
+													</span>
+												</a>
+											</li><!--./li-new-mail-->
+
+											<li class="active">
+												<a data-toggle="tab" href="#inbox" data-target="inbox">
+													<i class="blue icon-inbox bigger-130"></i>
+													<span class="bigger-110">Inbox</span>
+												</a>
+											</li>
+
+											<li>
+												<a data-toggle="tab" href="#sent" data-target="sent">
+													<i class="orange icon-location-arrow bigger-130 "></i>
+													<span class="bigger-110">Sent</span>
+												</a>
+											</li>
+
+											<li>
+												<a data-toggle="tab" href="#draft" data-target="draft">
+													<i class="green icon-pencil bigger-130"></i>
+													<span class="bigger-110">Draft</span>
+												</a>
+											</li>
+
+											<li class="dropdown">
+												<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+													<i class="pink icon-tags bigger-130"></i>
+
+													<span class="bigger-110">
+														Tags
+														<i class="icon-caret-down"></i>
+													</span>
+												</a>
+
+												<ul class="dropdown-menu dropdown-light-blue dropdown-125">
+													<li>
+														<a data-toggle="tab" href="#tag-1" data-target="tag-1">
+															<span class="mail-tag badge badge-pink"></span>
+															<span class="pink">Tag#1</span>
+														</a>
+													</li>
+
+													<li>
+														<a data-toggle="tab" href="#tag-family" data-target="tag-family">
+															<span class="mail-tag badge badge-success"></span>
+															<span class="green">Family</span>
+														</a>
+													</li>
+
+													<li>
+														<a data-toggle="tab" href="#tag-friends" data-target="tag-friends">
+															<span class="mail-tag badge badge-info"></span>
+															<span class="blue">Friends</span>
+														</a>
+													</li>
+
+													<li>
+														<a data-toggle="tab" href="#tag-work" data-target="tag-work">
+															<span class="mail-tag badge badge-grey"></span>
+															<span class="grey">Work</span>
+														</a>
+													</li>
+												</ul>
+											</li><!--/.dropdown-->
+										</ul>
+
+										<div class="tab-content no-border no-padding">
+											<div class="tab-pane in active">
+												<div class="message-container">
+													<div id="id-message-list-navbar" class="message-navbar align-center clearfix">
+														<div class="message-bar">
+															<div class="message-infobar" id="id-message-infobar">
+																<span class="blue bigger-150">Inbox</span>
+																<span class="grey bigger-110">(2 unread messages)</span>
+															</div>
+
+															<div class="message-toolbar hide">
+																<div class="inline position-relative align-left">
+																	<a href="#" class="btn-message btn btn-mini dropdown-toggle" data-toggle="dropdown">
+																		<span class="bigger-110">Action</span>
+
+																		<i class="icon-caret-down icon-on-right"></i>
+																	</a>
+
+																	<ul class="dropdown-menu dropdown-lighter dropdown-caret dropdown-125">
+																		<li>
+																			<a href="#">
+																				<i class="icon-mail-reply blue"></i>
+																				&nbsp; Reply
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#">
+																				<i class="icon-mail-forward green"></i>
+																				&nbsp; Forward
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#">
+																				<i class="icon-folder-open orange"></i>
+																				&nbsp; Archive
+																			</a>
+																		</li>
+
+																		<li class="divider"></li>
+
+																		<li>
+																			<a href="#">
+																				<i class="icon-eye-open blue"></i>
+																				&nbsp; Mark as read
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#">
+																				<i class="icon-eye-close green"></i>
+																				&nbsp; Mark unread
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#">
+																				<i class="icon-flag-alt red"></i>
+																				&nbsp; Flag
+																			</a>
+																		</li>
+
+																		<li class="divider"></li>
+
+																		<li>
+																			<a href="#">
+																				<i class="icon-trash red bigger-110"></i>
+																				&nbsp; Delete
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+
+																<div class="inline position-relative align-left">
+																	<a href="#" class="btn-message btn btn-mini dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-folder-close-alt bigger-110"></i>
+																		<span class="bigger-110">Move to</span>
+
+																		<i class="icon-caret-down icon-on-right"></i>
+																	</a>
+
+																	<ul class="dropdown-menu dropdown-lighter dropdown-caret dropdown-125">
+																		<li>
+																			<a href="#">
+																				<i class="icon-stop pink2"></i>
+																				&nbsp; Tag#1
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#">
+																				<i class="icon-stop blue"></i>
+																				&nbsp; Family
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#">
+																				<i class="icon-stop green"></i>
+																				&nbsp; Friends
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#">
+																				<i class="icon-stop grey"></i>
+																				&nbsp; Work
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+
+																<a href="#" class="btn btn-mini btn-message">
+																	<i class="icon-trash bigger-125"></i>
+																	<span class="bigger-110">Delete</span>
+																</a>
+															</div>
+														</div>
+
+														<div>
+															<div class="messagebar-item-left">
+																<label class="inline middle">
+																	<input type="checkbox" id="id-toggle-all" class="ace" />
+																	<span class="lbl"></span>
+																</label>
+
+																&nbsp;
+																<div class="inline position-relative">
+																	<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+																		<i class="icon-caret-down bigger-125 middle"></i>
+																	</a>
+
+																	<ul class="dropdown-menu dropdown-lighter dropdown-100">
+																		<li>
+																			<a id="id-select-message-all" href="#">All</a>
+																		</li>
+
+																		<li>
+																			<a id="id-select-message-none" href="#">None</a>
+																		</li>
+
+																		<li class="divider"></li>
+
+																		<li>
+																			<a id="id-select-message-unread" href="#">Unread</a>
+																		</li>
+
+																		<li>
+																			<a id="id-select-message-read" href="#">Read</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+
+															<div class="messagebar-item-right">
+																<div class="inline position-relative">
+																	<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+																		Sort &nbsp;
+																		<i class="icon-caret-down bigger-125"></i>
+																	</a>
+
+																	<ul class="dropdown-menu dropdown-lighter pull-right dropdown-100">
+																		<li>
+																			<a href="#">
+																				<i class="icon-ok green"></i>
+																				Date
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#">
+																				<i class="icon-ok invisible"></i>
+																				From
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#">
+																				<i class="icon-ok invisible"></i>
+																				Subject
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+
+															<div class="nav-search minimized">
+																<form class="form-search">
+																	<span class="input-icon">
+																		<input type="text" autocomplete="off" class="input-small nav-search-input" placeholder="Search inbox ..." />
+																		<i class="icon-search nav-search-icon"></i>
+																	</span>
+																</form>
+															</div>
+														</div>
+													</div>
+
+													<div id="id-message-item-navbar" class="hide message-navbar align-center clearfix">
+														<div class="message-bar">
+															<div class="message-toolbar">
+																<div class="inline position-relative align-left">
+																	<a href="#" class="btn-message btn btn-mini dropdown-toggle" data-toggle="dropdown">
+																		<span class="bigger-110">Action</span>
+
+																		<i class="icon-caret-down icon-on-right"></i>
+																	</a>
+
+																	<ul class="dropdown-menu dropdown-lighter dropdown-caret dropdown-125">
+																		<li>
+																			<a href="#">
+																				<i class="icon-mail-reply blue"></i>
+																				&nbsp; Reply
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#">
+																				<i class="icon-mail-forward green"></i>
+																				&nbsp; Forward
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#">
+																				<i class="icon-folder-open orange"></i>
+																				&nbsp; Archive
+																			</a>
+																		</li>
+
+																		<li class="divider"></li>
+
+																		<li>
+																			<a href="#">
+																				<i class="icon-eye-open blue"></i>
+																				&nbsp; Mark as read
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#">
+																				<i class="icon-eye-close green"></i>
+																				&nbsp; Mark unread
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#">
+																				<i class="icon-flag-alt red"></i>
+																				&nbsp; Flag
+																			</a>
+																		</li>
+
+																		<li class="divider"></li>
+
+																		<li>
+																			<a href="#">
+																				<i class="icon-trash red bigger-110"></i>
+																				&nbsp; Delete
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+
+																<div class="inline position-relative align-left">
+																	<a href="#" class="btn-message btn btn-mini dropdown-toggle" data-toggle="dropdown">
+																		<i class="icon-folder-close-alt bigger-110"></i>
+																		<span class="bigger-110">Move to</span>
+
+																		<i class="icon-caret-down icon-on-right"></i>
+																	</a>
+
+																	<ul class="dropdown-menu dropdown-lighter dropdown-caret dropdown-125">
+																		<li>
+																			<a href="#">
+																				<i class="icon-stop pink2"></i>
+																				&nbsp; Tag#1
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#">
+																				<i class="icon-stop blue"></i>
+																				&nbsp; Family
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#">
+																				<i class="icon-stop green"></i>
+																				&nbsp; Friends
+																			</a>
+																		</li>
+
+																		<li>
+																			<a href="#">
+																				<i class="icon-stop grey"></i>
+																				&nbsp; Work
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+
+																<a href="#" class="btn btn-mini btn-message">
+																	<i class="icon-trash bigger-125"></i>
+																	<span class="bigger-110">Delete</span>
+																</a>
+															</div>
+														</div>
+
+														<div>
+															<div class="messagebar-item-left">
+																<a href="#" class="btn-back-message-list">
+																	<i class="icon-arrow-left blue bigger-110 middle"></i>
+																	<b class="bigger-110 middle">Back</b>
+																</a>
+															</div>
+
+															<div class="messagebar-item-right">
+																<i class="icon-time bigger-110 orange middle"></i>
+																<span class="time grey">Today, 7:15 pm</span>
+															</div>
+														</div>
+													</div>
+
+													<div id="id-message-new-navbar" class="hide message-navbar align-center clearfix">
+														<div class="message-bar">
+															<div class="message-toolbar">
+																<a href="#" class="btn btn-mini btn-message">
+																	<i class="icon-save bigger-125"></i>
+																	<span class="bigger-110">Save Draft</span>
+																</a>
+
+																<a href="#" class="btn btn-mini btn-message">
+																	<i class="icon-remove bigger-125"></i>
+																	<span class="bigger-110">Discard</span>
+																</a>
+															</div>
+														</div>
+
+														<div class="message-item-bar">
+															<div class="messagebar-item-left">
+																<a href="#" class="btn-back-message-list no-hover-underline">
+																	<i class="icon-arrow-left blue bigger-110 middle"></i>
+																	<b class="middle bigger-110">Back</b>
+																</a>
+															</div>
+
+															<div class="messagebar-item-right">
+																<span class="inline btn-send-message">
+																	<button type="button" class="btn btn-small btn-primary no-border">
+																		<span class="bigger-110">Send</span>
+
+																		<i class="icon-arrow-right icon-on-right"></i>
+																	</button>
+																</span>
+															</div>
+														</div>
+													</div>
+
+													<div class="message-list-container">
+														<div class="message-list" id="message-list">
+															<div class="message-item message-unread">
+																<label class="inline">
+																	<input type="checkbox" class="ace" />
+																	<span class="lbl"></span>
+																</label>
+
+																<i class="message-star icon-star orange2"></i>
+																<span class="sender" title="Alex John Red Smith">Alex John Red Smith </span>
+																<span class="time">1:33 pm</span>
+
+																<span class="summary">
+																	<span class="text">
+																		Click to open this message
+																	</span>
+																</span>
+															</div>
+
+															<div class="message-item message-unread">
+																<label class="inline">
+																	<input type="checkbox" class="ace" />
+																	<span class="lbl"></span>
+																</label>
+
+																<i class="message-star icon-star-empty light-grey"></i>
+
+																<span class="sender" title="John Doe">
+																	John Doe
+																	<span class="light-grey">(4)</span>
+																</span>
+																<span class="time">7:15 pm</span>
+
+																<span class="attachment">
+																	<i class="icon-paper-clip"></i>
+																</span>
+
+																<span class="summary">
+																	<span class="badge badge-pink mail-tag"></span>
+																	<span class="text">
+																		Clik to open this message right here
+																	</span>
+																</span>
+															</div>
+
+															<div class="message-item">
+																<label class="inline">
+																	<input type="checkbox" class="ace" />
+																	<span class="lbl"></span>
+																</label>
+
+																<i class="message-star icon-star-empty light-grey"></i>
+																<span class="sender" title="Philip Markov">Philip Markov </span>
+																<span class="time">10:15 am</span>
+
+																<span class="attachment">
+																	<i class="icon-paper-clip"></i>
+																</span>
+
+																<span class="summary">
+																	<span class="message-flags">
+																		<i class="icon-reply light-grey"></i>
+																	</span>
+																	<span class="text">
+																		Photo booth beard raw denim letterpress vegan
+																	</span>
+																</span>
+															</div>
+
+															<div class="message-item">
+																<label class="inline">
+																	<input type="checkbox" class="ace" />
+																	<span class="lbl"></span>
+																</label>
+
+																<i class="message-star icon-star orange2"></i>
+																<span class="sender" title="Sabrina">Sabrina </span>
+																<span class="time">Yesterday</span>
+
+																<span class="summary">
+																	<span class="text">
+																		Nullam quis risus eget urna mollis ornare
+																	</span>
+																</span>
+															</div>
+
+															<div class="message-item">
+																<label class="inline">
+																	<input type="checkbox" class="ace" />
+																	<span class="lbl"></span>
+																</label>
+
+																<i class="message-star icon-star-empty light-grey"></i>
+																<span class="sender" title="Philip Markov">Philip Markov </span>
+																<span class="time">Yesterday</span>
+
+																<span class="attachment">
+																	<i class="icon-paper-clip"></i>
+																</span>
+
+																<span class="summary">
+																	<span class="badge badge-success mail-tag"></span>
+																	<span class="text">
+																		Vestibulum id ligula porta felis euismod
+																	</span>
+																</span>
+															</div>
+
+															<div class="message-item">
+																<label class="inline">
+																	<input type="checkbox" class="ace" />
+																	<span class="lbl"></span>
+																</label>
+
+																<i class="message-star icon-star-empty light-grey"></i>
+																<span class="sender" title="Doctor Gomenz">Doctor Gomenz </span>
+																<span class="time">April 5</span>
+
+																<span class="summary">
+																	<span class="text">
+																		Vim te vivendo convenire, summo fuisset
+																	</span>
+																</span>
+															</div>
+
+															<div class="message-item">
+																<label class="inline">
+																	<input type="checkbox" class="ace" />
+																	<span class="lbl"></span>
+																</label>
+
+																<i class="message-star icon-star-empty light-grey"></i>
+																<span class="sender" title="Robin Hood">Robin Hood </span>
+																<span class="time">April 4</span>
+
+																<span class="summary">
+																	<span class="message-flags">
+																		<i class="icon-reply light-grey"></i>
+																	</span>
+																	<span class="text">
+																		No eos veniam equidem mentitum, his porro
+																	</span>
+																</span>
+															</div>
+
+															<div class="message-item">
+																<label class="inline">
+																	<input type="checkbox" class="ace" />
+																	<span class="lbl"></span>
+																</label>
+
+																<i class="message-star icon-star-empty light-grey"></i>
+																<span class="sender" title="Google Inc">Google Inc </span>
+																<span class="time">April 3</span>
+
+																<span class="summary">
+																	<span class="badge badge-grey mail-tag"></span>
+																	<span class="text">
+																		Convallis facilisis euismod urna sodales
+																	</span>
+																</span>
+															</div>
+
+															<div class="message-item">
+																<label class="inline">
+																	<input type="checkbox" class="ace" />
+																	<span class="lbl"></span>
+																</label>
+
+																<i class="message-star icon-star-empty light-grey"></i>
+																<span class="sender" title="Shrek">Shrek </span>
+																<span class="time">March 28</span>
+
+																<span class="attachment">
+																	<i class="icon-paper-clip"></i>
+																</span>
+
+																<span class="summary">
+																	<span class="message-flags">
+																		<i class="icon-flag icon-flip-horizontal light-grey"></i>
+																	</span>
+																	<span class="text">
+																		Photo booth beard raw denim letterpress vegan messenger
+																	</span>
+																</span>
+															</div>
+
+															<div class="message-item">
+																<label class="inline">
+																	<input type="checkbox" class="ace" />
+																	<span class="lbl"></span>
+																</label>
+
+																<i class="message-star icon-star-empty light-grey"></i>
+																<span class="sender" title="Yahoo!">Yahoo! </span>
+																<span class="time">March 27</span>
+
+																<span class="summary">
+																	<span class="message-flags">
+																		<i class="icon-mail-forward light-grey"></i>
+																	</span>
+																	<span class="text">
+																		Tofu biodiesel williamsburg marfa, four loko mcsweeney
+																	</span>
+																</span>
+															</div>
+														</div>
+													</div><!--/.message-list-container-->
+
+													<div class="message-footer clearfix">
+														<div class="pull-left"> 151 messages total </div>
+
+														<div class="pull-right">
+															<div class="inline middle"> page 1 of 16 </div>
+
+															&nbsp; &nbsp;
+															<ul class="pagination inline unstyled middle">
+																<li class="disabled">
+																	<span>
+																		<i class="icon-step-backward middle"></i>
+																	</span>
+																</li>
+
+																<li class="disabled">
+																	<span>
+																		<i class="icon-caret-left bigger-140 middle"></i>
+																	</span>
+																</li>
+
+																<li>
+																	<input value="1" maxlength="3" type="text" />
+																</li>
+
+																<li>
+																	<a href="#">
+																		<i class="icon-caret-right bigger-140 middle"></i>
+																	</a>
+																</li>
+
+																<li>
+																	<a href="#">
+																		<i class="icon-step-forward middle"></i>
+																	</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+
+													<div class="hide message-footer message-footer-style2 clearfix">
+														<div class="pull-left"> simpler footer </div>
+
+														<div class="pull-right">
+															<div class="inline middle"> message 1 of 151 </div>
+
+															&nbsp; &nbsp;
+															<ul class="pagination inline unstyled middle">
+																<li class="disabled">
+																	<span>
+																		<i class="icon-angle-left bigger-150"></i>
+																	</span>
+																</li>
+
+																<li>
+																	<a href="#">
+																		<i class="icon-angle-right bigger-150"></i>
+																	</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div><!--/.message-container-->
+											</div><!--/.tab-pane-->
+										</div><!--/.tab-content-->
+									</div><!--/.tabbable-->
+								</div><!--/.span-->
+							</div><!--/.row-fluid-->
+
+							<form id="id-message-form" class="hide form-horizontal message-form">
+								<div class="control-group">
+									<label class="control-label" for="form-field-recipient">Recipient:</label>
+
+									<div class="controls">
+										<span class="input-icon">
+											<input type="email" name="recipient" id="form-field-recipient" data-value="alex@doe.com" value="alex@doe.com" placeholder="Recipient(s)" />
+											<i class="icon-user"></i>
+										</span>
+									</div>
+								</div>
+
+								<div class="hr hr-16 dotted"></div>
+
+								<div class="control-group">
+									<label class="control-label" for="form-field-subject">Subject:</label>
+
+									<div class="controls">
+										<span class="input-icon span8">
+											<input maxlength="100" type="text" class="span12" name="subject" id="form-field-subject" placeholder="Subject" />
+											<i class="icon-comment-alt"></i>
+										</span>
+									</div>
+								</div>
+
+								<div class="hr hr-16 dotted"></div>
+
+								<div class="control-group">
+									<label class="control-label">
+										<span class="inline space-16 hidden-480"></span>
+										Message:
+									</label>
+
+									<div class="controls">
+										<div class="wysiwyg-editor"></div>
+									</div>
+								</div>
+
+								<div class="hr hr-16 dotted"></div>
+
+								<div class="control-group no-margin-bottom">
+									<label class="control-label">Attachments:</label>
+
+									<div class="controls">
+										<div id="form-attachments">
+											<input type="file" name="attachment[]" />
+										</div>
+									</div>
+								</div>
+
+								<div class="control-group">
+									<div class="align-right">
+										<button id="id-add-attachment" type="button" class="btn btn-small btn-danger">
+											<i class="icon-paper-clip bigger-140"></i>
+											Add Attachment
+										</button>
+									</div>
+								</div>
+							</form>
+
+							<div class="hide message-content" id="id-message-content">
+								<div class="message-header clearfix">
+									<div class="pull-left">
+										<span class="blue bigger-125"> Clik to open this message </span>
+
+										<div class="space-4"></div>
+
+										<i class="icon-star orange2 mark-star"></i>
+
+										&nbsp;
+										<img class="middle" alt="John's Avatar" src="assets/avatars/avatar.png" width="32" />
+										&nbsp;
+										<a href="#" class="sender">John Doe</a>
+
+										&nbsp;
+										<i class="icon-time bigger-110 orange middle"></i>
+										<span class="time">Today, 7:15 pm</span>
+									</div>
+
+									<div class="action-buttons pull-right">
+										<a href="#">
+											<i class="icon-reply green icon-only bigger-130"></i>
+										</a>
+
+										<a href="#">
+											<i class="icon-mail-forward blue icon-only bigger-130"></i>
+										</a>
+
+										<a href="#">
+											<i class="icon-trash red icon-only bigger-130"></i>
+										</a>
+									</div>
+								</div>
+
+								<div class="hr hr-double"></div>
+
+								<div class="message-body">
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									</p>
+
+									<p>
+										Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									</p>
+
+									<p>
+										Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+									</p>
+
+									<p>
+										Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+
+									<p>
+										Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+									</p>
+
+									<p>
+										Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+									</p>
+								</div>
+
+								<div class="hr hr-double"></div>
+
+								<div class="message-attachment clearfix">
+									<div class="attachment-title">
+										<span class="blue bolder bigger-110">Attachments</span>
+										&nbsp;
+										<span class="grey">(2 files, 4.5 MB)</span>
+
+										<div class="inline position-relative">
+											<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+												&nbsp;
+												<i class="icon-caret-down bigger-125 middle"></i>
+											</a>
+
+											<ul class="dropdown-menu dropdown-lighter">
+												<li>
+													<a href="#">Download all as zip</a>
+												</li>
+
+												<li>
+													<a href="#">Display in slideshow</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									&nbsp;
+									<ul class="attachment-list pull-left unstyled">
+										<li>
+											<a href="#" class="attached-file inline">
+												<i class="icon-file-alt bigger-110 middle"></i>
+												<span class="attached-name middle">Document1.pdf</span>
+											</a>
+
+											<div class="action-buttons inline">
+												<a href="#">
+													<i class="icon-download-alt bigger-125 blue"></i>
+												</a>
+
+												<a href="#">
+													<i class="icon-trash bigger-125 red"></i>
+												</a>
+											</div>
+										</li>
+
+										<li>
+											<a href="#" class="attached-file inline">
+												<i class="icon-film bigger-110 middle"></i>
+												<span class="attached-name middle">Sample.mp4</span>
+											</a>
+
+											<div class="action-buttons inline">
+												<a href="#">
+													<i class="icon-download-alt bigger-125 blue"></i>
+												</a>
+
+												<a href="#">
+													<i class="icon-trash bigger-125 red"></i>
+												</a>
+											</div>
+										</li>
+									</ul>
+
+									<div class="attachment-images pull-right">
+										<div class="vspace-4"></div>
+
+										<div>
+											<img width="36" alt="image 4" src="assets/images/gallery/thumb-4.jpg" />
+											<img width="36" alt="image 3" src="assets/images/gallery/thumb-3.jpg" />
+											<img width="36" alt="image 2" src="assets/images/gallery/thumb-2.jpg" />
+											<img width="36" alt="image 1" src="assets/images/gallery/thumb-1.jpg" />
+										</div>
+									</div>
+								</div>
+							</div><!--/.message-content-->
+
+							<!--PAGE CONTENT ENDS-->
+						</div><!--/.span-->
+					</div><!--/.row-fluid-->
+
+							
+                          
+						</div>
+						
+						<!--Correspondence End -->
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+							</div>
+                       				
+						</div>
+					</div><!--/span-->
+	
+	
+	
+											</div><!--/widget-main-->
+										</div><!--/widget-body-->
+									</div>
+								
+								
+								
+								
+								<!-- pie Chart start-->
+								
+								<!-- pie Chart start-->
+								<div class="span25">
+								
+								<div class="widget-box1">
+										<div class="widget-header widget-header-flat widget-header-small">
+											<h5>
+												<i class="icon-signal"></i>
+												Current Savings
+											</h5>
+
+											
+										</div>
+
+										<div class="widget-body">
+											<div class="widget-main">
+												<div id="piechart-placeholder" style="width: 90%; min-height: 150px; padding: 0px; position: relative;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 371px; height: 150px;" width="371" height="150"></canvas><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 371px; height: 150px;" width="371" height="150"></canvas><div class="legend"><div style="position: absolute; width: 68px; height: 66px; top: 15px; right: -30px; background-color: rgb(255, 255, 255); opacity: 0.85;"> </div><table style="position:absolute;top:15px;right:-30px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #68BC31;overflow:hidden"></div></div></td><td class="legendLabel"> Lab Costs</td></tr><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #2091CF;overflow:hidden"></div></div></td><td class="legendLabel">Rx Costs</td></tr><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #DA5430;overflow:hidden"></div></div></td><td class="legendLabel">Pcp Costs</td></tr></tbody></table></div></div>
+
+												<div class="hr hr8 hr-double"></div>
+
+											
+												</div>
+											</div><!--/widget-main-->
+										</div><!--/widget-body-->
+									</div>
+								
+								<!-- pie Chart End-->
+								<!-- pie Chart start2-->
+								<div class="span25">
+								
+								<div class="widget-box2">
+										<div class="widget-header widget-header-flat widget-header-small">
+											<h5>
+												<i class="icon-signal"></i>
+												Projected Savings
+											</h5>
+
+											
+										</div>
+
+										<div class="widget-body">
+											<div class="widget-main">
+												<div id="piechart-placeholder1" style="width: 90%; min-height: 150px; padding: 0px; position: relative;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 371px; height: 150px;" width="371" height="150"></canvas><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 371px; height: 150px;" width="371" height="150"></canvas><div class="legend"><div style="position: absolute; width: 68px; height: 66px; top: 15px; right: -30px; background-color: rgb(255, 255, 255); opacity: 0.85;"> </div><table style="position:absolute;top:15px;right:-30px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #68BC31;overflow:hidden"></div></div></td><td class="legendLabel">Very Low</td></tr><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #2091CF;overflow:hidden"></div></div></td><td class="legendLabel">Low</td></tr><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid #DA5430;overflow:hidden"></div></div></td><td class="legendLabel">Over Limit</td></tr></tbody></table></div></div>
+
+												<div class="hr hr8 hr-double"></div>
+
+											
+												</div>
+											</div><!--/widget-main-->
+										</div><!--/widget-body-->
+									</div>
+								
+								<!-- pie Chart End2-->
+								
+								
+							</div><!--/row-->
+								
+
+								
+							</div>
+
+							<script type="text/javascript">
+								var $path_assets = "assets";//this will be used in gritter Notifications containing images
+							</script>
+
+							<!--PAGE CONTENT ENDS-->
+						</div><!--/.span-->
+					</div><!--/.row-fluid-->
+				</div><!--/.page-content-->
+
+				<div class="ace-settings-container" id="ace-settings-container">
+
+
+					<div class="ace-settings-box" id="ace-settings-box">
+						<div>
+							<div class="pull-left">
+								<select id="skin-colorpicker" class="hide">
+									<option data-skin="default" value="#438EB9">#438EB9</option>
+									<option data-skin="skin-1" value="#222A2D">#222A2D</option>
+									<option data-skin="skin-2" value="#C6487E">#C6487E</option>
+									<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+								</select>
+							</div>
+							<span>&nbsp; Choose Skin</span>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-navbar" />
+							<label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar" />
+							<label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
+						</div>
+
+						<
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" />
+							<label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
+						</div>
+					</div>
+				</div><!--/#ace-settings-container-->
+			</div><!--/.main-content-->
+		</div><!--/.main-container-->
+
+	
+
+		<!--basic scripts-->
+
+		<!--[if !IE]>-->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+<!--js script test-->
+
+<!-- js script test end-->
+		<!--<![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!--page specific plugin scripts-->
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/bootbox.min.js"></script>
+		<script src="assets/js/jquery.easy-pie-chart.min.js"></script>
+		<script src="assets/js/jquery.gritter.min.js"></script>
+		<script src="assets/js/spin.min.js"></script>
+
+		<!--ace scripts-->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+
+		<!--inline scripts related to this page-->
+		
+		
+		
+		
+		
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!--page specific plugin scripts-->
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/jquery.slimscroll.min.js"></script>
+		<script src="assets/js/jquery.easy-pie-chart.min.js"></script>
+		<script src="assets/js/jquery.sparkline.min.js"></script>
+		<script src="assets/js/flot/jquery.flot.min.js"></script>
+		<script src="assets/js/flot/jquery.flot.pie.min.js"></script>
+		<script src="assets/js/flot/jquery.flot.resize.min.js"></script>
+
+		<!--ace scripts-->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+
+		<!--inline scripts related to this page-->
+
+		<script type="text/javascript">
+			jQuery(function($) {
+				$('.easy-pie-chart.percentage').each(function(){
+					var $box = $(this).closest('.infobox');
+					var barColor = $(this).data('color') || (!$box.hasClass('infobox-dark') ? $box.css('color') : 'rgba(255,255,255,0.95)');
+					var trackColor = barColor == 'rgba(255,255,255,0.95)' ? 'rgba(255,255,255,0.25)' : '#E2E2E2';
+					var size = parseInt($(this).data('size')) || 50;
+					$(this).easyPieChart({
+						barColor: barColor,
+						trackColor: trackColor,
+						scaleColor: false,
+						lineCap: 'butt',
+						lineWidth: parseInt(size/10),
+						animate: /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase()) ? false : 1000,
+						size: size
+					});
+				})
+			
+				$('.sparkline').each(function(){
+					var $box = $(this).closest('.infobox');
+					var barColor = !$box.hasClass('infobox-dark') ? $box.css('color') : '#FFF';
+					$(this).sparkline('html', {tagValuesAttribute:'data-values', type: 'bar', barColor: barColor , chartRangeMin:$(this).data('min') || 0} );
+				});
+			
+			
+			
+			
+			  var placeholder = $('#piechart-placeholder').css({'width':'80%' , 'min-height':'150px'});
+			  var placeholder1 = $('#piechart-placeholder1').css({'width':'80%' , 'min-height':'150px'});
+			  var placeholder2 = $('#piechart-placeholder2').css({'width':'80%' , 'min-height':'150px'});
+			  var data = [
+				{ label: "Savings",  data: 60, color: "#68BC31"},
+				{ label: "Rx Costs",  data: 24.5, color: "#2091CF"},
+				{ label: "Pcp Costs",  data: 15, color: "#AF4E96"},
+				{ label: "Lab Costs",  data: 5.5, color: "#DA5430"},
+				
+			  ]
+			  var data1 = [
+				{ label: "Savings",  data: 40, color: "#68BC31"},
+				{ label: "Rx Costs",  data: 14.5, color: "#2091CF"},
+				{ label: "Pcp Costs",  data: 30, color: "#AF4E96"},
+				{ label: "Lab Costs",  data: 15.5, color: "#DA5430"},
+				
+			  ]
+			  var data2 = [
+				{ label: "Primary Care",  data:30, color: "#68BC31"},
+				{ label: "Lab Costs",  data:14.5, color: "#2091CF"},
+				{ label: "In-Patient",  data:30, color: "#AF4E96"},
+				{ label: "Rx Cost",  data:15.5, color: "#DA5430"},
+				{ label: "Others",  data:10, color: "#FFFF00"},
+			  ]
+			  
+			  function drawPieChart(placeholder, data, position) {
+			 	  $.plot(placeholder, data, {
+					series: {
+						pie: {
+							show: true,
+							tilt:0.8,
+							highlight: {
+								opacity: 0.25
+							},
+							stroke: {
+								color: '#fff',
+								width: 2
+							},
+							startAngle: 2
+						}
+					},
+					legend: {
+						show: true,
+						position: position || "ne", 
+						labelBoxBorderColor: null,
+						margin:[-40,15]
+					}
+					,
+					grid: {
+						hoverable: true,
+						clickable: true
+					}
+				 })
+			 }
+			 drawPieChart(placeholder, data);
+			 drawPieChart(placeholder1, data1);
+			  drawPieChart(placeholder2, data2);
+			 /**
+			 we saved the drawing function and the data to redraw with different position later when switching to RTL mode dynamically
+			 so that's not needed actually.
+			 */
+			 placeholder.data('chart', data);
+			 placeholder.data('draw', drawPieChart);
+			 placeholder1.data('chart', data1);
+			 placeholder1.data('draw', drawPieChart);
+			  placeholder2.data('chart', data1);
+			 placeholder2.data('draw', drawPieChart);
+			
+			
+			  var $tooltip = $("<div class='tooltip top in hide'><div class='tooltip-inner'></div></div>").appendTo('body');
+			  var previousPoint = null;
+			
+			  placeholder.on('plothover', function (event, pos, item) {
+				if(item) {
+					if (previousPoint != item.seriesIndex) {
+						previousPoint = item.seriesIndex;
+						var tip = item.series['label'] + " : " + item.series['percent']+'%';
+						$tooltip.show().children(0).text(tip);
+					}
+					$tooltip.css({top:pos.pageY + 10, left:pos.pageX + 10});
+				} else {
+					$tooltip.hide();
+					previousPoint = null;
+				}
+				
+			 })
+			 ;
+			
+			  placeholder1.on('plothover', function (event, pos, item) {
+				if(item) {
+					if (previousPoint != item.seriesIndex) {
+						previousPoint = item.seriesIndex;
+						var tip = item.series['label'] + " : " + item.series['percent']+'%';
+						$tooltip.show().children(0).text(tip);
+					}
+					$tooltip.css({top:pos.pageY + 10, left:pos.pageX + 10});
+				} else {
+					$tooltip.hide();
+					previousPoint = null;
+				}
+				
+			 });
+			
+			
+			 placeholder2.on('plothover', function (event, pos, item) {
+				if(item) {
+					if (previousPoint != item.seriesIndex) {
+						previousPoint = item.seriesIndex;
+						var tip = item.series['label'] + " : " + item.series['percent']+'%';
+						$tooltip.show().children(0).text(tip);
+					}
+					$tooltip.css({top:pos.pageY + 10, left:pos.pageX + 10});
+				} else {
+					$tooltip.hide();
+					previousPoint = null;
+				}
+				
+			 });
+			
+				
+			
+				$('#recent-box [data-rel="tooltip"]').tooltip({placement: tooltip_placement});
+				function tooltip_placement(context, source) {
+					var $source = $(source);
+					var $parent = $source.closest('.tab-content')
+					var off1 = $parent.offset();
+					var w1 = $parent.width();
+			
+					var off2 = $source.offset();
+					var w2 = $source.width();
+			
+					if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
+					return 'left';
+				}
+			
+			
+				$('.dialogs,.comments').slimScroll({
+					height: '300px'
+			    });
+				
+				
+				//Android's default browser somehow is confused when tapping on label which will lead to dragging the task
+				//so disable dragging when clicking on label
+				var agent = navigator.userAgent.toLowerCase();
+				if("ontouchstart" in document && /applewebkit/.test(agent) && /android/.test(agent))
+				  $('#tasks').on('touchstart', function(e){
+					var li = $(e.target).closest('#tasks li');
+					if(li.length == 0)return;
+					var label = li.find('label.inline').get(0);
+					if(label == e.target || $.contains(label, e.target)) e.stopImmediatePropagation() ;
+				});
+			
+				$('#tasks').sortable({
+					opacity:0.8,
+					revert:true,
+					forceHelperSize:true,
+					placeholder: 'draggable-placeholder',
+					forcePlaceholderSize:true,
+					tolerance:'pointer',
+					stop: function( event, ui ) {//just for Chrome!!!! so that dropdowns on items don't appear below other items after being moved
+						$(ui.item).css('z-index', 'auto');
+					}
+					}
+				);
+				$('#tasks').disableSelection();
+				$('#tasks input:checkbox').removeAttr('checked').on('click', function(){
+					if(this.checked) $(this).closest('li').addClass('selected');
+					else $(this).closest('li').removeClass('selected');
+				});
+				
+			
+			})
+		</script>
+								<!-- pie Chart End-->
+								<!-- pie Chart start2-->
+								
+								
+								<!-- pie Chart End2-->
+								
+							</div><!--/row-->
+								
+
+								
+							</div>
+
+							<script type="text/javascript">
+								var $path_assets = "assets";//this will be used in gritter Notifications containing images
+							</script>
+
+							<!--PAGE CONTENT ENDS-->
+						</div><!--/.span-->
+					</div><!--/.row-fluid-->
+				</div><!--/.page-content-->
+
+				<div class="ace-settings-container" id="ace-settings-container">
+					
+
+					<div class="ace-settings-box" id="ace-settings-box">
+						<div>
+							<div class="pull-left">
+								<select id="skin-colorpicker" class="hide">
+									<option data-skin="default" value="#438EB9">#438EB9</option>
+									<option data-skin="skin-1" value="#222A2D">#222A2D</option>
+									<option data-skin="skin-2" value="#C6487E">#C6487E</option>
+									<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+								</select>
+							</div>
+							<span>&nbsp; Choose Skin</span>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-navbar" />
+							<label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar" />
+							<label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-breadcrumbs" />
+							<label class="lbl1" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
+						</div>
+
+						<div>
+							<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" />
+							<label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
+						</div>
+					</div>
+				</div><!--/#ace-settings-container-->
+			</div><!--/.main-content-->
+		</div><!--/.main-container-->
+
+	
+
+		<!--basic scripts-->
+
+		<!--[if !IE]>-->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+<!--js script test-->
+
+<!-- js script test end-->
+		<!--<![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!--page specific plugin scripts-->
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/bootbox.min.js"></script>
+		<script src="assets/js/jquery.easy-pie-chart.min.js"></script>
+		<script src="assets/js/jquery.gritter.min.js"></script>
+		<script src="assets/js/spin.min.js"></script>
+
+		<!--ace scripts-->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+
+		<!--inline scripts related to this page-->
+		
+		
+		
+		
+		
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<!--page specific plugin scripts-->
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/jquery.slimscroll.min.js"></script>
+		<script src="assets/js/jquery.easy-pie-chart.min.js"></script>
+		<script src="assets/js/jquery.sparkline.min.js"></script>
+		<script src="assets/js/flot/jquery.flot.min.js"></script>
+		<script src="assets/js/flot/jquery.flot.pie.min.js"></script>
+		<script src="assets/js/flot/jquery.flot.resize.min.js"></script>
+
+		<!--ace scripts-->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+
+		<!--inline scripts related to this page-->
+
+		
+	
+		
+
+		<script type="text/javascript">
+			jQuery(function($) {
+				/**
+				$('#myTab a[data-toggle="tab"]').on('shown', function (e) {
+				  console.log(e.target.getAttribute("href"));
+				})
+				*/
+			
+			
+				$('#accordion2').on('hide', function (e) {
+					$(e.target).prev().children(0).addClass('collapsed');
+				})
+				$('#accordion2').on('hidden', function (e) {
+					$(e.target).prev().children(0).addClass('collapsed');
+				})
+				$('#accordion2').on('show', function (e) {
+					$(e.target).prev().children(0).removeClass('collapsed');
+				})
+				$('#accordion2').on('shown', function (e) {
+					$(e.target).prev().children(0).removeClass('collapsed');
+				})
+				
+				$('#accordion-style').on('click', function(e){
+					var target = $(e.target);
+					var which = parseInt($.trim(target.text()));
+					if(which == 2) $('#accordion2').addClass('accordion-style2');
+					 else $('#accordion2').removeClass('accordion-style2');
+				});
+			
+			
+				var oldie = /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase());
+				$('.easy-pie-chart.percentage').each(function(){
+					$(this).easyPieChart({
+						barColor: $(this).data('color'),
+						trackColor: '#EEEEEE',
+						scaleColor: false,
+						lineCap: 'butt',
+						lineWidth: 8,
+						animate: oldie ? false : 1000,
+						size:75
+					}).css('color', $(this).data('color'));
+				});
+			
+				$('[data-rel=tooltip]').tooltip();
+				$('[data-rel=popover]').popover({html:true});
+			
+			
+				$('#gritter-regular').on(ace.click_event, function(){
+					$.gritter.add({
+						title: 'This is a regular notice!',
+						text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="blue">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+						image: $path_assets+'/avatars/avatar1.png',
+						sticky: false,
+						time: '',
+						class_name: (!$('#gritter-light').get(0).checked ? 'gritter-light' : '')
+					});
+			
+					return false;
+				});
+			
+				$('#gritter-sticky').on(ace.click_event, function(){
+					var unique_id = $.gritter.add({
+						title: 'This is a sticky notice!',
+						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="red">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+						image: $path_assets+'/avatars/avatar.png',
+						sticky: true,
+						time: '',
+						class_name: 'gritter-info' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+					});
+			
+					return false;
+				});
+			
+			
+				$('#gritter-without-image').on(ace.click_event, function(){
+					$.gritter.add({
+						// (string | mandatory) the heading of the notification
+						title: 'This is a notice without an image!',
+						// (string | mandatory) the text inside the notification
+						text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="orange">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+						class_name: 'gritter-success' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+					});
+			
+					return false;
+				});
+			
+			
+				$('#gritter-max3').on(ace.click_event, function(){
+					$.gritter.add({
+						title: 'This is a notice with a max of 3 on screen at one time!',
+						text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="green">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+						image: $path_assets+'/avatars/avatar3.png',
+						sticky: false,
+						before_open: function(){
+							if($('.gritter-item-wrapper').length >= 3)
+							{
+								return false;
+							}
+						},
+						class_name: 'gritter-warning' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+					});
+			
+					return false;
+				});
+			
+			
+				$('#gritter-center').on(ace.click_event, function(){
+					$.gritter.add({
+						title: 'This is a centered notification',
+						text: 'Just add a "gritter-center" class_name to your $.gritter.add or globally to $.gritter.options.class_name',
+						class_name: 'gritter-info gritter-center' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+					});
+			
+					return false;
+				});
+				
+				$('#gritter-error').on(ace.click_event, function(){
+					$.gritter.add({
+						title: 'This is a warning notification',
+						text: 'Just add a "gritter-light" class_name to your $.gritter.add or globally to $.gritter.options.class_name',
+						class_name: 'gritter-error' + (!$('#gritter-light').get(0).checked ? ' gritter-light' : '')
+					});
+			
+					return false;
+				});
+					
+			
+				$("#gritter-remove").on(ace.click_event, function(){
+					$.gritter.removeAll();
+					return false;
+				});
+					
+			
+				///////
+			
+			
+				$("#bootbox-regular").on(ace.click_event, function() {
+					bootbox.prompt("What is your name?", function(result) {
+						if (result === null) {
+							//Example.show("Prompt dismissed");
+						} else {
+							//Example.show("Hi <b>"+result+"</b>");
+						}
+					});
+				});
+					
+				$("#bootbox-confirm").on(ace.click_event, function() {
+					bootbox.confirm("Are you sure?", function(result) {
+						if(result) {
+							bootbox.Notification("You are sure!");
+						}
+					});
+				});
+					
+				$("#bootbox-options").on(ace.click_event, function() {
+					bootbox.dialog("I am a custom dialog with smaller buttons", [{
+						"label" : "Success!",
+						"class" : "btn-small btn-success",
+						"callback": function() {
+							//Example.show("great success");
+						}
+						}, {
+						"label" : "Danger!",
+						"class" : "btn-small btn-danger",
+						"callback": function() {
+							//Example.show("uh oh, look out!");
+						}
+						}, {
+						"label" : "Click ME!",
+						"class" : "btn-small btn-primary",
+						"callback": function() {
+							//Example.show("Primary button");
+						}
+						}, {
+						"label" : "Just a button...",
+						"class" : "btn-small"
+						}]
+					);
+				});
+			
+			
+			
+				$('#spinner-opts small').css({display:'inline-block', width:'60px'})
+			
+				var slide_styles = ['', 'green','red','purple','orange', 'dark'];
+				var ii = 0;
+				$("#spinner-opts input[type=text]").each(function() {
+					var $this = $(this);
+					$this.hide().after('<span />');
+					$this.next().addClass('ui-slider-small').
+					addClass("inline ui-slider-"+slide_styles[ii++ % slide_styles.length]).
+					css({'width':'125px'}).slider({
+						value:parseInt($this.val()),
+						range: "min",
+						animate:true,
+						min: parseInt($this.data('min')),
+						max: parseInt($this.data('max')),
+						step: parseFloat($this.data('step')),
+						slide: function( event, ui ) {
+							$this.attr('value', ui.value);
+							spinner_update();
+						}
+					});
+				});
+			
+			
+			
+			
+			
+				$.fn.spin = function(opts) {
+					this.each(function() {
+					  var $this = $(this),
+						  data = $this.data();
+			
+					  if (data.spinner) {
+						data.spinner.stop();
+						delete data.spinner;
+					  }
+					  if (opts !== false) {
+						data.spinner = new Spinner($.extend({color: $this.css('color')}, opts)).spin(this);
+					  }
+					});
+					return this;
+				};
+			
+				function spinner_update() {
+					var opts = {};
+					$('#spinner-opts input[type=text]').each(function() {
+						opts[this.name] = parseFloat(this.value);
+					});
+					$('#spinner-preview').spin(opts);
+				}
+			
+			
+			
+				$('#id-pills-stacked').removeAttr('checked').on('click', function(){
+					$('.nav-pills').toggleClass('nav-stacked');
+				});
+			
+			
+			});
+			
+			
+			
+			<!--Profile-->
+			
+			
+			
+			
+			<!--End of Profile-->
+			
+			
+		</script>
+		
+		
+		<script type="text/javascript">
+			jQuery(function($){
+			
+				//handling tabs and loading/displaying relevant messages and forms
+				//not needed if using the alternative view, as described in docs
+				var prevTab = 'inbox'
+				$('#inbox-tabs a[data-toggle="tab"]').on('show', function (e) {
+					var currentTab = $(e.target).data('target');
+					if(currentTab == 'write') {
+						Inbox.show_form();
+					}
+					else {
+						if(prevTab == 'write')
+							Inbox.show_list();
+			
+						//load and display the relevant messages 
+					}
+					prevTab = currentTab;
+				})
+			
+			
+				
+				//basic initializations
+				$('.message-list .message-item input[type=checkbox]').removeAttr('checked');
+				$('.message-list').delegate('.message-item input[type=checkbox]' , 'click', function() {
+					$(this).closest('.message-item').toggleClass('selected');
+					if(this.checked) Inbox.display_bar(1);//display action toolbar when a message is selected
+					else {
+						Inbox.display_bar($('.message-list input[type=checkbox]:checked').length);
+						//determine number of selected messages and display/hide action toolbar accordingly
+					}		
+				});
+			
+			
+				//check/uncheck all messages
+				$('#id-toggle-all').removeAttr('checked').on('click', function(){
+					if(this.checked) {
+						Inbox.select_all();
+					} else Inbox.select_none();
+				});
+				
+				//select all
+				$('#id-select-message-all').on('click', function(e) {
+					e.preventDefault();
+					Inbox.select_all();
+				});
+				
+				//select none
+				$('#id-select-message-none').on('click', function(e) {
+					e.preventDefault();
+					Inbox.select_none();
+				});
+				
+				//select read
+				$('#id-select-message-read').on('click', function(e) {
+					e.preventDefault();
+					Inbox.select_read();
+				});
+			
+				//select unread
+				$('#id-select-message-unread').on('click', function(e) {
+					e.preventDefault();
+					Inbox.select_unread();
+				});
+			
+				/////////
+			
+				//display first message in a new area
+				$('.message-list .message-item:eq(0) .text').on('click', function() {
+					//show the loading icon
+					$('.message-container').append('<div class="message-loading"><i class="icon-spin icon-spinner orange2 bigger-160"></i></div>');
+					
+					$('.message-inline-open').removeClass('message-inline-open').find('.message-content').remove();
+			
+					var message_list = $(this).closest('.message-list');
+			
+					//some waiting
+					setTimeout(function() {
+			
+						//hide everything that is after .message-list (which is either .message-content or .message-form)
+						message_list.next().hide();
+						$('.message-container').find('.message-loading').remove();
+			
+						//close and remove the inline opened message if any!
+			
+						//hide all navbars
+						$('.message-navbar').hide();
+						//now show the navbar for single message item
+						$('#id-message-item-navbar').show();
+			
+						//hide all footers
+						$('.message-footer').hide();
+						//now show the alternative footer
+						$('.message-footer-style2').show();
+			
+						
+						//move .message-content next to .message-list and hide .message-list
+						message_list.hide().after($('.message-content')).next().show();
+			
+						//add scrollbars to .message-body
+						$('.message-content .message-body').slimScroll({
+							height: 200,
+							railVisible:true
+						});
+			
+					}, 500 + parseInt(Math.random() * 500));
+				});
+			
+			
+				//display second message right inside the message list
+				$('.message-list .message-item:eq(1) .text').on('click', function(){
+					var message = $(this).closest('.message-item');
+			
+					//if message is open, then close it
+					if(message.hasClass('message-inline-open')) {
+						message.removeClass('message-inline-open').find('.message-content').remove();
+						return;
+					}
+			
+					$('.message-container').append('<div class="message-loading"><i class="icon-spin icon-spinner orange2 bigger-160"></i></div>');
+					setTimeout(function() {
+						$('.message-container').find('.message-loading').remove();
+						message
+							.addClass('message-inline-open')
+							.append('<div class="message-content" />')
+						var content = message.find('.message-content:last').html( $('#id-message-content').html() );
+			
+						content.find('.message-body').slimScroll({
+							height: 200,
+							railVisible:true
+						});
+				
+					}, 500 + parseInt(Math.random() * 500));
+					
+				});
+			
+			
+			
+				//back to message list
+				$('.btn-back-message-list').on('click', function(e) {
+					e.preventDefault();
+					Inbox.show_list();
+					$('#inbox-tabs a[data-target="inbox"]').tab('show'); 
+				});
+			
+			
+			
+				//hide message list and display new message form
+				/**
+				$('.btn-new-mail').on('click', function(e){
+					e.preventDefault();
+					Inbox.show_form();
+				});
+				*/
+			
+			
+			
+			
+				var Inbox = {
+					//displays a toolbar according to the number of selected messages
+					display_bar : function (count) {
+						if(count == 0) {
+							$('#id-toggle-all').removeAttr('checked');
+							$('#id-message-list-navbar .message-toolbar').hide();
+							$('#id-message-list-navbar .message-infobar').show();
+						}
+						else {
+							$('#id-message-list-navbar .message-infobar').hide();
+							$('#id-message-list-navbar .message-toolbar').show();
+						}
+					}
+					,
+					select_all : function() {
+						var count = 0;
+						$('.message-item input[type=checkbox]').each(function(){
+							this.checked = true;
+							$(this).closest('.message-item').addClass('selected');
+							count++;
+						});
+						
+						$('#id-toggle-all').get(0).checked = true;
+						
+						Inbox.display_bar(count);
+					}
+					,
+					select_none : function() {
+						$('.message-item input[type=checkbox]').removeAttr('checked').closest('.message-item').removeClass('selected');
+						$('#id-toggle-all').get(0).checked = false;
+						
+						Inbox.display_bar(0);
+					}
+					,
+					select_read : function() {
+						$('.message-unread input[type=checkbox]').removeAttr('checked').closest('.message-item').removeClass('selected');
+						
+						var count = 0;
+						$('.message-item:not(.message-unread) input[type=checkbox]').each(function(){
+							this.checked = true;
+							$(this).closest('.message-item').addClass('selected');
+							count++;
+						});
+						Inbox.display_bar(count);
+					}
+					,
+					select_unread : function() {
+						$('.message-item:not(.message-unread) input[type=checkbox]').removeAttr('checked').closest('.message-item').removeClass('selected');
+						
+						var count = 0;
+						$('.message-unread input[type=checkbox]').each(function(){
+							this.checked = true;
+							$(this).closest('.message-item').addClass('selected');
+							count++;
+						});
+						
+						Inbox.display_bar(count);
+					}
+				}
+			
+				//show message list (back from writing mail or reading a message)
+				Inbox.show_list = function() {
+					$('.message-navbar').hide();
+					$('#id-message-list-navbar').show();
+			
+					$('.message-footer').hide();
+					$('.message-footer:not(.message-footer-style2)').show();
+			
+					$('.message-list').show().next().hide();
+					//hide the message item / new message window and go back to list
+				}
+			
+				//show write mail form
+				Inbox.show_form = function() {
+					if($('.message-form').is(':visible')) return;
+					if(!form_initialized) {
+						initialize_form();
+					}
+					
+					var message = $('.message-list');
+					$('.message-container').append('<div class="message-loading"><i class="icon-spin icon-spinner orange2 bigger-160"></i></div>');
+					
+					setTimeout(function() {
+						message.next().hide();
+						
+						$('.message-container').find('.message-loading').remove();
+						
+						$('.message-list').hide();
+						$('.message-footer').hide();
+						$('.message-form').show().insertAfter('.message-list');
+						
+						$('.message-navbar').hide();
+						$('#id-message-new-navbar').show();
+						
+						
+						//reset form??
+						$('.message-form .wysiwyg-editor').empty();
+					
+						$('.message-form .ace-file-input').closest('.file-input-container:not(:first-child)').remove();
+						$('.message-form input[type=file]').ace_file_input('reset_input');
+						
+						$('.message-form').get(0).reset();
+						
+					}, 300 + parseInt(Math.random() * 300));
+				}
+				
+				
+				
+				
+				var form_initialized = false;
+				function initialize_form() {
+					if(form_initialized) return;
+					form_initialized = true;
+					
+					//intialize wysiwyg editor
+					$('.message-form .wysiwyg-editor').ace_wysiwyg({
+						toolbar:
+						[
+							'bold',
+							'italic',
+							'strikethrough',
+							'underline',
+							null,
+							'justifyleft',
+							'justifycenter',
+							'justifyright',
+							null,
+							'createLink',
+							'unlink',
+							null,
+							'undo',
+							'redo'
+						]
+					}).prev().addClass('wysiwyg-style1');
+			
+					//file input
+					$('.message-form input[type=file]').ace_file_input()
+					//and the wrap it inside .span7 for better display, perhaps
+					.closest('.ace-file-input').addClass('width-90 inline').wrap('<div class="row-fluid file-input-container"><div class="span7"></div></div>');
+			
+					//the button to add a new file input
+					$('#id-add-attachment').on('click', function(){
+						var file = $('<input type="file" name="attachment[]" />').appendTo('#form-attachments');
+						file.ace_file_input();
+						file.closest('.ace-file-input').addClass('width-90 inline').wrap('<div class="row-fluid file-input-container"><div class="span7"></div></div>')
+						.parent(/*.span7*/).append('<div class="action-buttons pull-right">\
+							<a href="#" data-action="delete">\
+								<i class="icon-trash red bigger-130 middle"></i>\
+							</a>\
+						</div>').find('a[data-action=delete]').on('click', function(e){
+							//the button that removes the newly inserted file input
+							e.preventDefault();			
+							$(this).closest('.row-fluid').hide(300, function(){
+								$(this).remove();
+							});
+						});
+					});
+				}//initialize_form
+			
+			
+				//turn the recipient field into a tag input field!
+				/**	
+				var tag_input = $('#form-field-recipient');
+				if(! ( /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase())) ) 
+					tag_input.tag({placeholder:tag_input.attr('placeholder')});
+			
+			
+				//and add form reset functionality
+				$('.message-form button[type=reset]').on('click', function(){
+					$('.message-form .message-body').empty();
+					
+					$('.message-form .ace-file-input:not(:first-child)').remove();
+					$('.message-form input[type=file]').ace_file_input('reset_input');
+					
+					
+					var val = tag_input.data('value');
+					tag_input.parent().find('.tag').remove();
+					$(val.split(',')).each(function(k,v){
+						tag_input.before('<span class="tag">'+v+'<button class="close" type="button">&times;</button></span>');
+					});
+				});
+				*/
+			
+			});
+		</script>
+		
+		
+		
+				
+	<footer id="footer" class="grid-block center">
+	                
+							<a id="totop-scroller" href="#page"></a>
+							<div class="muted">
+							
+			                 <small>@2013 Copyright Synergy Payer Solutions. All rights reserved.</small>		
+                            </div>	
+
+		
+		
+		
+	</body>
+</html>
